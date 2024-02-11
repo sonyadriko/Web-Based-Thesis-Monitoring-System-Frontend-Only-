@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+	<meta content="Sistem Manajemen Skripsi" name="description">
+    <meta content="ITATS" name="author">
+	<meta content="bootstrap, bootstrap 5, bootstrap5, admin, dashboard, template, responsive, css, sass, html, laravel, theme, front-end, ui kit, web" name="keywords">
+
+	<title>Detail Pengajuan Judul</title>
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com" rel="preconnect">
+	<link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+	<!-- End fonts -->
+
+	<link href="../asset/favicon.ico" rel="shortcut icon">
+    <style>
+        .p-2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .progress {
+            width: 100%;
+        }
+
+        .statuses-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .status {
+            flex: 1;
+            text-align: center;
+            margin: 2px;
+            font-weight: bold;
+        }
+    </style>
+	<!-- plugin css -->
+	<link href="../asset/assets/fonts/feather-font/css/iconfont.css" rel="stylesheet" />
+	<link href="../asset/assets/plugins/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" />
+	<!-- end plugin css -->
+	<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+	<!-- common css -->
+	<link href="../asset/css/app.css" rel="stylesheet" />
+	<!-- end common css -->
+
+</head>
+<body class="sidebar-dark" data-base-url="{{ url('/">
+
+    <script src="../asset/assets/js/spinner.js"></script>
+
+    <div class="main-wrapper" id="app">
+        <!-- Sidebar -->
+		<nav class="sidebar">
+            <!-- Sidebar header / logo -->
+            <div class="sidebar-header">
+                <a href="dashboard.html" class="sidebar-brand">
+                    SM<span> SKRIPSI</span>
+                </a>
+                <div class="sidebar-toggler not-active">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <!-- Akhir sidebar header / logo -->
+            <!-- sidebar list -->
+            <div class="sidebar-body">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="dashboard.html" class="nav-link">
+                          <i class="link-icon" data-feather="box"></i>
+                          <span class="link-title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-category">Pengajuan & Surat</li>
+                        <li class="nav-item ">
+                            <a class="nav-link" data-bs-toggle="collapse" href="#email" role="button"  aria-controls="email">
+                                <i class="link-icon" data-feather="book-open"></i>
+                                <span class="link-title">Proposal & Skripsi</span>
+                                <i class="link-arrow" data-feather="chevron-down"></i>
+                            </a>
+                        <div class="collapse" id="email">
+                            <ul class="nav sub-menu">
+                                <li class="nav-item">
+                                    <a href="data_pengajuan_judul.html" class="nav-link">Pengajuan Judul</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="data_surat_tugas.html" class="nav-link">Surat Tugas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="data_bidang_ilmu.html" class="nav-link">Tema Penelitian</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                
+                    <li class="nav-item nav-category">Jadwal & Berita Acara</li>
+                    <li class="nav-item">
+                        <a href="data_penjadwalan.html" class="nav-link">
+                            <i class="link-icon" data-feather="calendar"></i>
+                            <span class="link-title">Penjadwalan</span>
+                        </a>
+                    </li>
+                      <li class="nav-item ">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#ba" role="button"  aria-controls="email">
+                          <i class="link-icon" data-feather="book"></i>
+                          <span class="link-title">Berita Acara</span>
+                          <i class="link-arrow" data-feather="chevron-down"></i>
+                        </a>
+                        <div class="collapse" id="ba">
+                          <ul class="nav sub-menu">
+                            <li class="nav-item">
+                              <a href="data_berita_acara_proposal.html" class="nav-link">BA Sidang Proposal</a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="data_berita_acara_skripsi.html" class="nav-link">BA Sidang Skripsi</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                
+                      <li class="nav-item nav-category">Manajemen</li>
+                      <li class="nav-item">
+                        <a href="data_pengguna.html" class="nav-link">
+                          <i class="link-icon" data-feather="users"></i>
+                          <span class="link-title">Data Pengguna</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="data_ruangan.html" class="nav-link">
+                          <i class="link-icon" data-feather="book"></i>
+                          <span class="link-title">Ruangan</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="data_mata_kuliah.html" class="nav-link">
+                          <i class="link-icon" data-feather="book"></i>
+                          <span class="link-title">Mata Kuliah Pendukung</span>
+                        </a>
+                      </li>
+                </ul>
+            </div>
+             <!-- sidebar list -->
+        </nav>
+        <!-- Ini page wrapper  -->
+		<div class="page-wrapper">
+			<!-- Ini header -->
+            <nav class="navbar">
+                <a class="sidebar-toggler" href="#">
+                    <i data-feather="menu"></i>
+                </a>
+                <div class="navbar-content">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown notifications">
+                            <a aria-expanded="false" aria-haspopup="true" class="notifications nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="notificationDropdown" role="button">
+                                <i data-feather="bell"></i>
+                                <div class="indicator">
+                                    <div class="circle"></div>
+                                </div>
+                            </a>
+                            <div aria-labelledby="notificationDropdown" class="dropdown-menu p-0">
+                                <div class="d-flex align-items-center justify-content-between border-bottom px-3 py-2">
+                                    <p>New Notifications</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center border-top px-3 py-2">
+                                    <a href="javascript:;">View all</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="profile.html" id="profileDropdown" role="button">
+                                <img alt="profile" class="wd-30 ht-30 rounded-circle" src="../asset/img/women_profile.svg">
+                            </a>
+                            <div aria-labelledby="profileDropdown" class="dropdown-menu p-0">
+                                <div class="d-flex flex-column align-items-center border-bottom px-5 py-3">
+                                    <div class="mb-3">
+                                    <img alt="profile" class="wd-80 ht-80 rounded-circle" src="../asset/img/women_profile.svg">
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="tx-16 fw-bolder">Koordiantor</p>
+                                        <p class="tx-12 text-muted">
+                                            Koordiantor
+                                        </p>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled p-1">
+                                    <li class="dropdown-item py-2">
+                                        <a href="login.html">
+                                            <i class="icon-md me-2" data-feather="log-out"></i>
+                                            <span>Log Out</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Ini akhir header -->
+            <!-- Ini isi content -->
+			<div class="page-content">
+                <link href="../asset/assets2/libs/datatables.net-bs4/datatables.net-bs4.min.css" rel="stylesheet" type="text/css" />
+                <link href="../asset/assets2/libs/datatables.net-buttons-bs4/datatables.net-buttons-bs4.min.css" rel="stylesheet" type="text/css" />
+                <link href="../asset/assets2/libs/datatables.net-responsive-bs4/datatables.net-responsive-bs4.min.css" rel="stylesheet" type="text/css" />
+                <meta name="csrf-token" content="{{ csrf_token() }}">
+
+                <nav class="page-breadcrumb">
+                    <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Penjadwalan</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Pengajuan Sidang Proposal</li>
+                    </ol>
+                </nav>
+                <div class="row">
+                    <div class="container-xxl flex-grow-1 container-p-y">
+
+                        <div class="card mb-4">
+                            <h5 class="card-header">Form Pengajuan</h5>
+                            <div class="card-body">
+                                <form action="detail_pengajuan_judul_after.html" method="POST" id="form-id">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Nama Mahasiswa</label>
+                                        <input class="form-control" type="text" id="name" name="nama" value="{{ $data->name }}" readonly disabled/>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="npm" class="form-label">NPM Mahasiswa</label>
+                                        <input class="form-control" type="text" id="npm" value="{{ $data->kode_unik }}" name="npm" placeholder="13.2019.1.00819" readonly disabled />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="judul" class="form-label">Rencana Judul Proposal Skripsi</label>
+                                        <input class="form-control" type="text" id="judul" value="{{ $data->judul }}" name="judul" placeholder="13.2019.1.00819" readonly disabled/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="tbi" class="form-label">Topik Bidang Ilmu</label>
+                                        <input class="form-control" type="text" id="tbi" value="{{ $data->topik_bidang_ilmu }}" name="tbi" readonly disabled/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="tbi" class="form-label">Mata Kuliah Pilihan Semester VIII dan VII</label>
+                                        <input class="form-control" type="text" id="tbi" value="{{ $data->mk_pilihan }}" name="tbi" readonly disabled/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="dosen_pembimbing_utama" class="form-label">Dosen Pembimbing Utama</label>
+                                        <select class="form-select" id="select1" name="dosen_pembimbing_utama" aria-label="Default select example">
+                                            <option value="" selected disabled>Open this select menu</option>
+                                            @foreach($dosen2 as $dosen)
+                                                <option value="{{ $dosen->name }}">{{ $dosen->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="dosen_pembimbing_ii" class="form-label">Dosen Pembimbing II</label>
+                                        <select class="form-select" id="select2" name="dosen_pembimbing_ii" aria-label="Default select example">
+                                            <option value="" selected disabled>Open this select menu</option>
+                                            <option value="Tidak Ada">Tidak Ada</option>
+                                        </select>
+                                    </div>
+                                    <input type="hidden" name="pengajuan_id" value="{{ $data->id_pengajuan_judul }}" />
+                                    <input type="hidden" name="bidang_ilmu_id" value="{{ $data->bidang_ilmu_id }}" />
+                                    <input type="hidden" name="users_id" value="{{ $data->users_id }}" />
+
+                                    <div class="d-flex justify-content-between mt-4">
+                                        <button type="button" class="btn btn-secondary" onclick="window.history.back();">Kembali</button>
+                                        <div style="display: flex; justify-content: flex-end;">
+                                                <button type="submit" class="btn btn-primary" id="btn-terima">Terima</button>
+
+                                        </div>
+                                    </div>
+                                </form>
+                                <form action="{{ route('pengajuan-judul-tolak', ['id' => $data->id_pengajuan_judul]) }}" method="POST">
+                                    <!-- ... form fields ... -->
+                                    <div class="mt-4" style="display: flex; justify-content: flex-end;">
+                                        <button type="button" class="btn btn-danger" id="rejectBtn">Tolak</button>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="rejectModal" tabindex="-1" role="dialog" aria-labelledby="rejectModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="rejectModalLabel">Tolak Pengajuan</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                        <label for="rejectReason" class="form-label">Alasan Penolakan:</label>
+                        <textarea class="form-control" id="rejectReason" name="rejectReason" rows="3"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                        <button type="button" class="btn btn-danger" id="rejectSubmitBtn">Tolak</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+			</div>
+            <!-- ini akhir isi content -->
+            <!-- ini footer -->
+            <footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between px-4 py-3 border-top small">
+                <p class="text-muted mb-1 mb-md-0">Copyright © <script>document.write(new Date().getFullYear())</script> Sistem Informasi.</p>
+            </footer>
+            
+            <!-- ini akhir footer -->
+		</div>
+	</div>
+
+
+        <script src="../asset/assets/plugins/flatpickr/flatpickr.min.js"></script>
+        <script src = "../asset/assets/plugins/apexcharts/apexcharts.min.js"></script>
+        <script src="../asset/assets/js/dashboard.js"></script>
+        <!-- base js -->
+        <script src="../asset/js/app.js"></script>
+        <script src="../asset/assets/plugins/feather-icons/feather.min.js"></script>
+        <script src="../asset/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+        <!-- end base js -->
+        <!-- common js -->
+        <script src="../asset/assets/js/template.js"></script>
+        <!-- end common js -->
+        <script src="../asset/assets/js/dashboard.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    </body>
+</html>
