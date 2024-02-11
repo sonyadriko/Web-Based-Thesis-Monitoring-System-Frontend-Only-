@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+	<meta content="Sistem Manajemen Skripsi" name="description">
+    <meta content="ITATS" name="author">
+	<meta content="bootstrap, bootstrap 5, bootstrap5, admin, dashboard, template, responsive, css, sass, html, laravel, theme, front-end, ui kit, web" name="keywords">
+
+	<title>Pengajuan Judul</title>
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com" rel="preconnect">
+	<link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+	<!-- End fonts -->
+
+    <link href="../asset/assets/plugins/jquery-steps/jquery.steps.css" rel="stylesheet" />
+
+
+	<link href="../asset/favicon.ico" rel="shortcut icon">
+	<!-- plugin css -->
+	<link href="../asset/assets/fonts/feather-font/css/iconfont.css" rel="stylesheet" />
+	<link href="../asset/assets/plugins/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" />
+	<!-- end plugin css -->
+	<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+	<!-- common css -->
+	<link href="../asset/css/app.css" rel="stylesheet" />
+	<!-- end common css -->
+
+</head>
+<body class="sidebar-dark" data-base-url="../asset//">
+
+    <script src="../asset/assets/js/spinner.js"></script>
+
+    <div class="main-wrapper" id="app">
+        <!-- Sidebar -->
+		<nav class="sidebar">
+            <!-- Sidebar header / logo -->
+            <div class="sidebar-header">
+                <a href="dashboard.html" class="sidebar-brand">
+                    SM<span> SKRIPSI</span>
+                </a>
+                <div class="sidebar-toggler not-active">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <!-- Akhir sidebar header / logo -->
+            <!-- sidebar list -->
+            <div class="sidebar-body">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="dashboard.html" class="nav-link">
+                            <i class="link-icon" data-feather="box"></i>
+                            <span class="link-title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-category">Pengajuan & Surat</li>
+                    <li class="nav-item ">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#email" role="button"  aria-controls="email">
+                            <i class="link-icon" data-feather="inbox"></i>
+                            <span class="link-title">Forms</span>
+                            <i class="link-arrow" data-feather="chevron-down"></i>
+                        </a>
+                        <div class="collapse" id="email">
+                            <ul class="nav sub-menu">
+                                <li class="nav-item">
+                                <a href="pengajuan_judul.html" class="nav-link">Pengajuan Judul</a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pengajuan_sidang_proposal.html" class="nav-link">Sidang Proposal</a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pengajuan_surat_tugas.html" class="nav-link">Surat Tugas Bimbingan</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pengajuan_sidang_skripsi.html" class="nav-link">Sidang Skripsi</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-category">Bimbingan & Revisi</li>
+                    <li class="nav-item ">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#bimbingan" role="button"  aria-controls="bimbingan">
+                            <i class="link-icon" data-feather="book"></i>
+                            <span class="link-title">Bimbingan</span>
+                            <i class="link-arrow" data-feather="chevron-down"></i>
+                        </a>
+                        <div class="collapse" id="bimbingan">
+                            <ul class="nav sub-menu">
+                                <li class="nav-item">
+                                    <a href="bimbingan_proposal.html" class="nav-link">Bimbingan Proposal</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="bimbingan_skripsi.html" class="nav-link">Bimbingan Skripsi</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#revisi" role="button"  aria-controls="revisi">
+                            <i class="link-icon" data-feather="inbox"></i>
+                            <span class="link-title">Revisi</span>
+                            <i class="link-arrow" data-feather="chevron-down"></i>
+                        </a>
+                        <div class="collapse" id="revisi">
+                            <ul class="nav sub-menu">
+                                <li class="nav-item">
+                                    <a href="revisi_sidang_proposal.html" class="nav-link">Sidang Proposal Skripsi</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="revisi_sidang_skripsi.html" class="nav-link">Sidang Laporan Skripsi</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-category">Lain - lain</li>
+                    <li class="nav-item ">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#lainlain" role="button"  aria-controls="lainlain">
+                            <i class="link-icon" data-feather="mail"></i>
+                            <span class="link-title">Lain - lain</span>
+                            <i class="link-arrow" data-feather="chevron-down"></i>
+                        </a>
+                        <div class="collapse" id="lainlain">
+                            <ul class="nav sub-menu">
+                                <li class="nav-item">
+                                    <a href="faq.html" class="nav-link">FAQ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+             <!-- sidebar list -->
+        </nav>
+        <!-- Ini page wrapper  -->
+		<div class="page-wrapper">
+			<!-- Ini header -->
+            <nav class="navbar">
+                <a class="sidebar-toggler" href="#">
+                    <i data-feather="menu"></i>
+                </a>
+                <div class="navbar-content">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown notifications">
+                            <a aria-expanded="false" aria-haspopup="true" class="notifications nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="notificationDropdown" role="button">
+                                <i data-feather="bell"></i>
+                                <div class="indicator">
+                                    <div class="circle"></div>
+                                </div>
+                            </a>
+                            <div aria-labelledby="notificationDropdown" class="dropdown-menu p-0">
+                                <div class="d-flex align-items-center justify-content-between border-bottom px-3 py-2">
+                                    <p>New Notifications</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center border-top px-3 py-2">
+                                    <a href="javascript:;">View all</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="profile.html" id="profileDropdown" role="button">
+                                <img alt="profile" class="wd-30 ht-30 rounded-circle" src="../asset/img/mhs_profile.svg">
+                            </a>
+                            <div aria-labelledby="profileDropdown" class="dropdown-menu p-0">
+                                <div class="d-flex flex-column align-items-center border-bottom px-5 py-3">
+                                    <div class="mb-3">
+                                    <img alt="profile" class="wd-80 ht-80 rounded-circle" src="../asset/img/mhs_profile.svg">
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="tx-16 fw-bolder">Mahasiswa</p>
+                                        <p class="tx-12 text-muted">
+                                            Mahasiswa
+                                        </p>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled p-1">
+                                    <li class="dropdown-item py-2">
+                                        <a class="text-body ms-0" href="profile.html">
+                                            <i class="icon-md me-2" data-feather="user"></i>
+                                            <span>Profile</span>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-item py-2">
+                                        <a href="login.html">
+                                            <i class="icon-md me-2" data-feather="log-out"></i>
+                                            <span>Log Out</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Ini isi content -->
+            <div class="page-content">
+                
+
+                <style>
+                    .wizard > .content {
+                        min-height: 50em; /* Menggunakan auto untuk menghilangkan batasan minimum tinggi */
+                    }
+                </style>
+                <nav class="page-breadcrumb">
+                    <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Forms</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Pengajuan Judul</li>
+                    </ol>
+                </nav>
+
+                <div class="row">
+                    <div class="container-xxl flex-grow-1 container-p-y">
+                        <div class="col-md-12 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Alur Pengajuan Judul</h4>
+                                    <div id="wizard">
+                                        <h2>Step Pertama</h2>
+                                        <section>
+                                            <div class="row">
+                                                <div class="card-group">
+                                                    <div class="card">
+                                                    <img src="../asset/img/wizard/pengajuan_judul/step1.svg" class="card-img-top" alt="...">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-center">Memilih Bidang Ilmu</h5>
+                                                        <p class="card-text text-center">Mahasiswa dapat memilih judul sesuai dengan bidang ilmu yang tersedia.</p>
+                                                    </div>
+                                                    </div>
+                                                    <div class="card">
+                                                    <img src="../asset/img/wizard/pengajuan_judul/step2.svg" class="card-img-top" alt="...">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-center">mengisi Form Pengajuan</h5>
+                                                        <p class="card-text text-center">Melakukan pengisian form pengajuan proposal, lalu menunggu konfirmasi koordinator.</p>
+                                                    </div>
+                                                    </div>
+                                                    <div class="card">
+                                                    <img src="../asset/img/wizard/pengajuan_judul/step3.svg" class="card-img-top" alt="...">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-center">Bimbingan Proposal</h5>
+                                                        <p class="card-text text-center">Selamat! Pengajuan yang anda lakukan telah diterima.</p>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+
+                                        <h2>Step Kedua</h2>
+                                        <section>
+                                            <form action="pengajuan_judul_status.html" method="POST" id="yourFormId">
+                                                <div class="mb-3">
+                                                    <label for="name" class="form-label">Nama Mahasiswa</label>
+                                                    <input class="form-control" type="text" id="name" name="nama" readonly autocomplete="nama"/>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="npm" class="form-label">NPM Mahasiswa</label>
+                                                    <input class="form-control" type="text" id="npm" name="npm" readonly/>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="judul" class="form-label">Rencana Judul Proposal Skripsi</label>
+                                                    <textarea class="form-control" id="judul" name="judul" rows="3" placeholder="Masukan rencana judul penelitian"></textarea>
+                                                    <p class="text-danger"> Maksimal 12 kata.</p>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="bidang_ilmu" class="form-label">Bidang Ilmu</label>
+                                                    <select class="form-select" id="bidang_ilmu_id" name="bidang_ilmu_id" aria-label="Default select example">
+                                                        <option value="" selected disabled="">Pilih Bidang Ilmu</option>
+                                                    
+                                                    </select>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Mata Kuliah Pilihan Semester VII</label>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="Audit SI-TI" name="mata_kuliah[]" id="audit_si_ti">
+                                                        <label class="form-check-label" for="audit_si_ti">Audit SI-TI</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="Enterprise Resource Planning" name="mata_kuliah[]" id="erp">
+                                                        <label class="form-check-label" for="erp">Enterprise Resource Planning</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="Framework Tata Kelola IT" name="mata_kuliah[]" id="FTKIT">
+                                                        <label class="form-check-label" for="FTKIT">Framework Tata Kelola IT</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="Inovasi SI dan Teknologi Terbaru" name="mata_kuliah[]" id="ISITT">
+                                                        <label class="form-check-label" for="ISITT">Inovasi SI dan Teknologi Terbaru</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="Recommender System" name="mata_kuliah[]" id="recommender_system">
+                                                        <label class="form-check-label" for="recommender_system">Recommender System</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="Teknik Peramalan" name="mata_kuliah[]" id="teknik_peramalan">
+                                                        <label class="form-check-label" for="teknik_peramalan">Teknik Peramalan</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="Business Intelligence" name="mata_kuliah[]" id="business_intelligence">
+                                                        <label class="form-check-label" for="business_intelligence">Business Intelligence</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="Perencanaan Strategis SI-TI" name="mata_kuliah[]" id="perencanaan_strategis_si_ti">
+                                                        <label class="form-check-label" for="perencanaan_strategis_si_ti">Perencanaan Strategis SI-TI</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="Manajemen Layanan" name="mata_kuliah[]" id="manajemen_layanan_si_ti">
+                                                        <label class="form-check-label" for="manajemen_layanan_si_ti">Manajemen Layanan SI-TI</label>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Mata Kuliah Pilihan Semester VIII</label>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="Manajemen Kualitas SI/TI" name="mata_kuliah[]" id="manajemen_kualitas_si_ti">
+                                                        <label class="form-check-label" for="manajemen_kualitas_si_ti">Manajemen Kualitas SI/TI</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="Manajemen Resiko SI/TI" name="mata_kuliah[]" id="manajemen_resiko_si_ti">
+                                                        <label class="form-check-label" for="manajemen_resiko_si_ti">Manajemen Resiko SI/TI</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="Model dan Simulasi Sistem" name="mata_kuliah[]" id="model_dan_simulasi_sistem">
+                                                        <label class="form-check-label" for="model_dan_simulasi_sistem">Model dan Simulasi Sistem</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="Rekayasa Kebutuhan" name="mata_kuliah[]" id="rekayasa_kebutuhan">
+                                                        <label class="form-check-label" for="rekayasa_kebutuhan">Rekayasa Kebutuhan</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="Sistem Informasi Intelegensia" name="mata_kuliah[]" id="sistem_informasi_intelegensia">
+                                                        <label class="form-check-label" for="sistem_informasi_intelegensia">Sistem Informasi Intelegensia</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="Testing dan Implementasi SI" name="mata_kuliah[]" id="testing_dan_implementasi_si">
+                                                        <label class="form-check-label" for="sistem_informasi_intelegensia">Testing dan Implementasi SI</label>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+         
+            </div>
+            <!-- ini akhir isi content -->
+            <!-- ini footer -->
+            <footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between px-4 py-3 border-top small">
+                <p class="text-muted mb-1 mb-md-0">Copyright © <script>document.write(new Date().getFullYear())</script> Sistem Informasi.</p>
+            </footer>
+            
+            <!-- ini akhir footer -->
+		</div>
+	</div>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script src="../asset/assets/plugins/jquery-steps/jquery.steps.min.js"></script>
+        <script src="../asset/assets/plugins/flatpickr/flatpickr.min.js"></script>
+        <script src = "../asset/assets/plugins/apexcharts/apexcharts.min.js"></script>
+        <script src="../asset/assets/js/dashboard.js"></script>
+        <!-- base js -->
+        <script src="../asset/js/app.js"></script>
+        <script src="../asset/assets/plugins/feather-icons/feather.min.js"></script>
+        <script src="../asset/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+        <!-- end base js -->
+        <!-- common js -->
+        <script src="../asset/assets/js/template.js"></script>
+        <!-- end common js -->
+           <!-- <script src="../asset/assets/js/wizard.js"></script> -->
+             
+                <script>
+                $(function() {
+                    'use strict';
+
+                    $("#wizard").steps({
+                    headerTag: "h2",
+                    bodyTag: "section",
+                    transitionEffect: "slideLeft",
+                    onStepChanging: function (event, currentIndex, newIndex) {
+                        // Validasi data di setiap langkah jika diperlukan
+                        return true; // Kembalikan true jika data valid
+                    },
+                    onFinished: function (event, currentIndex) {
+                        // Tampilkan konfirmasi sebelum menyimpan perubahan
+                        showConfirmation();
+                    }
+                    });
+
+                });
+                </script>
+
+    </body>
+</html>
+

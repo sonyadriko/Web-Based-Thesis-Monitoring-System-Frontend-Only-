@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+	<meta content="Sistem Manajemen Skripsi" name="description">
+    <meta content="ITATS" name="author">
+	<meta content="bootstrap, bootstrap 5, bootstrap5, admin, dashboard, template, responsive, css, sass, html, laravel, theme, front-end, ui kit, web" name="keywords">
+
+	<title>Profile</title>
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com" rel="preconnect">
+	<link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+	<!-- End fonts -->
+
+	<link href="../asset/favicon.ico" rel="shortcut icon">
+	<!-- plugin css -->
+	<link href="../asset/assets/fonts/feather-font/css/iconfont.css" rel="stylesheet" />
+	<link href="../asset/assets/plugins/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" />
+	<!-- end plugin css -->
+	<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+	<!-- common css -->
+	<link href="../asset/css/app.css" rel="stylesheet" />
+	<!-- end common css -->
+
+</head>
+<body class="sidebar-dark" data-base-url="{{ url('/">
+
+    <script src="../asset/assets/js/spinner.js"></script>
+
+    <div class="main-wrapper" id="app">
+        <!-- Sidebar -->
+		<nav class="sidebar">
+            <!-- Sidebar header / logo -->
+            <div class="sidebar-header">
+                <a href="dashboard.html" class="sidebar-brand">
+                    SM<span> SKRIPSI</span>
+                </a>
+                <div class="sidebar-toggler not-active">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <!-- Akhir sidebar header / logo -->
+            <!-- sidebar list -->
+            <div class="sidebar-body">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="dashboard.html" class="nav-link">
+                            <i class="link-icon" data-feather="box"></i>
+                            <span class="link-title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-category">Pengajuan & Surat</li>
+                    <li class="nav-item ">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#email" role="button"  aria-controls="email">
+                            <i class="link-icon" data-feather="inbox"></i>
+                            <span class="link-title">Forms</span>
+                            <i class="link-arrow" data-feather="chevron-down"></i>
+                        </a>
+                        <div class="collapse" id="email">
+                            <ul class="nav sub-menu">
+                                <li class="nav-item">
+                                <a href="pengajuan_judul.html" class="nav-link">Pengajuan Judul</a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pengajuan_sidang_proposal.html" class="nav-link">Sidang Proposal</a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pengajuan_surat_tugas.html" class="nav-link">Surat Tugas Bimbingan</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pengajuan_sidang_skripsi.html" class="nav-link">Sidang Skripsi</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-category">Bimbingan & Revisi</li>
+                    <li class="nav-item ">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#bimbingan" role="button"  aria-controls="bimbingan">
+                            <i class="link-icon" data-feather="book"></i>
+                            <span class="link-title">Bimbingan</span>
+                            <i class="link-arrow" data-feather="chevron-down"></i>
+                        </a>
+                        <div class="collapse" id="bimbingan">
+                            <ul class="nav sub-menu">
+                                <li class="nav-item">
+                                    <a href="bimbingan_proposal.html" class="nav-link">Bimbingan Proposal</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="bimbingan_skripsi.html" class="nav-link">Bimbingan Skripsi</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#revisi" role="button"  aria-controls="revisi">
+                            <i class="link-icon" data-feather="inbox"></i>
+                            <span class="link-title">Revisi</span>
+                            <i class="link-arrow" data-feather="chevron-down"></i>
+                        </a>
+                        <div class="collapse" id="revisi">
+                            <ul class="nav sub-menu">
+                                <li class="nav-item">
+                                    <a href="revisi_sidang_proposal.html" class="nav-link">Sidang Proposal Skripsi</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="revisi_sidang_skripsi.html" class="nav-link">Sidang Laporan Skripsi</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-category">Lain - lain</li>
+                    <li class="nav-item ">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#lainlain" role="button"  aria-controls="lainlain">
+                            <i class="link-icon" data-feather="mail"></i>
+                            <span class="link-title">Lain - lain</span>
+                            <i class="link-arrow" data-feather="chevron-down"></i>
+                        </a>
+                        <div class="collapse" id="lainlain">
+                            <ul class="nav sub-menu">
+                                <li class="nav-item">
+                                    <a href="faq.html" class="nav-link">FAQ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+             <!-- sidebar list -->
+        </nav>
+        <!-- Ini page wrapper  -->
+		<div class="page-wrapper">
+			<!-- Ini header -->
+            <nav class="navbar">
+                <a class="sidebar-toggler" href="#">
+                    <i data-feather="menu"></i>
+                </a>
+                <div class="navbar-content">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown notifications">
+                            <a aria-expanded="false" aria-haspopup="true" class="notifications nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="notificationDropdown" role="button">
+                                <i data-feather="bell"></i>
+                                <div class="indicator">
+                                    <div class="circle"></div>
+                                </div>
+                            </a>
+                            <div aria-labelledby="notificationDropdown" class="dropdown-menu p-0">
+                                <div class="d-flex align-items-center justify-content-between border-bottom px-3 py-2">
+                                    <p>New Notifications</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center border-top px-3 py-2">
+                                    <a href="javascript:;">View all</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="profile.html" id="profileDropdown" role="button">
+                                <img alt="profile" class="wd-30 ht-30 rounded-circle" src="../asset/img/mhs_profile.svg">
+                            </a>
+                            <div aria-labelledby="profileDropdown" class="dropdown-menu p-0">
+                                <div class="d-flex flex-column align-items-center border-bottom px-5 py-3">
+                                    <div class="mb-3">
+                                    <img alt="profile" class="wd-80 ht-80 rounded-circle" src="../asset/img/mhs_profile.svg">
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="tx-16 fw-bolder">Mahasiswa</p>
+                                        <p class="tx-12 text-muted">
+                                            Mahasiswa
+                                        </p>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled p-1">
+                                    <li class="dropdown-item py-2">
+                                        <a class="text-body ms-0" href="profile.html">
+                                            <i class="icon-md me-2" data-feather="user"></i>
+                                            <span>Profile</span>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-item py-2">
+                                        <a href="login.html">
+                                            <i class="icon-md me-2" data-feather="log-out"></i>
+                                            <span>Log Out</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Ini isi content -->
+            <div class="page-content">
+        <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
+        
+            <div>
+            <h4 class="mb-3 mb-md-0">Profile</h4>
+            </div>
+        </div>
+        <h6 class="mb-4">Data diri anda dapat dilihat pada halaman ini, anda dapat melakukan pengeditan informasi dibawah ini.</h6>
+
+        <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                <h6 class="card-title">Data Mahasiswa</h6>
+
+                <form class="forms-sample">
+                    <div class="mb-3">
+                    <label for="viewKodeUnik" class="form-label">NPM</label>
+                    <input type="text" class="form-control" id="viewKodeUnik" value="{{ Auth::user()->kode_unik }}" autocomplete="off" placeholder="Username" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label for="viewName" class="form-label">Nama</label>
+                        <input type="text" class="form-control" id="viewName" style="text-transform: capitalize;" value="{{ Auth::user()->name }}" placeholder="Nama" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label for="viewAlamatMahasiswa" class="form-label">Alamat Mahasiswa</label>
+                        <input type="text" class="form-control" id="viewAlamatMahasiswa" style="text-transform: capitalize;" value="{{ $details->alamat_mhs }}" placeholder="Alamat" disabled>
+                    </div>
+                    <div class="mb-3">
+                    <label for="viewNoTelpMahasiswa" class="form-label">No Telp Mahasiswa</label>
+                    <input type="text" class="form-control" id="viewNoTelpMahasiswa" value="{{ $details->no_telp_mhs }}" placeholder="No Telp" disabled>
+                    </div>
+                    <div class="mb-3">
+                    <label for="viewAlamatOrangTua" class="form-label">Alamat Orang Tua</label>
+                    <input type="text" class="form-control" id="viewAlamatOrangTua" style="text-transform: capitalize;" value="{{ $details->alamat_orang_tua }}" autocomplete="off" placeholder="Alamat Orang Tua" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label for="viewNoTelpOrangTua" class="form-label">No Telp Orang Tua</label>
+                        <input type="text" class="form-control" id="viewNoTelpOrangTua" autocomplete="off" value="{{ $details->no_telp_orang_tua }}" placeholder="No Telp Orang Tua" disabled>
+                    </div>
+                </form>
+                <div class="mt-4">
+                    <a href="profile_edit.html" class="btn btn-primary">Edit Profile</a>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+            </div>
+            <!-- ini akhir isi content -->
+            <!-- ini footer -->
+            <footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between px-4 py-3 border-top small">
+                <p class="text-muted mb-1 mb-md-0">Copyright © <script>document.write(new Date().getFullYear())</script> Sistem Informasi.</p>
+            </footer>
+            
+            <!-- ini akhir footer -->
+		</div>
+	</div>
+
+
+        <script src="../asset/assets/plugins/flatpickr/flatpickr.min.js"></script>
+        <script src = "../asset/assets/plugins/apexcharts/apexcharts.min.js"></script>
+        <script src="../asset/assets/js/dashboard.js"></script>
+        <!-- base js -->
+        <script src="../asset/js/app.js"></script>
+        <script src="../asset/assets/plugins/feather-icons/feather.min.js"></script>
+        <script src="../asset/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+        <!-- end base js -->
+        <!-- common js -->
+        <script src="../asset/assets/js/template.js"></script>
+        <!-- end common js -->
+    </body>
+</html>
+
