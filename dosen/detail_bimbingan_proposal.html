@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+	<meta content="Sistem Manajemen Skripsi" name="description">
+    <meta content="ITATS" name="author">
+	<meta content="bootstrap, bootstrap 5, bootstrap5, admin, dashboard, template, responsive, css, sass, html, laravel, theme, front-end, ui kit, web" name="keywords">
+
+	<title>Detail Bimbingan Proposal</title>
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com" rel="preconnect">
+	<link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+	<!-- End fonts -->
+
+	<link href="../asset/favicon.ico" rel="shortcut icon">
+
+	<!-- plugin css -->
+	<link href="../asset/assets/fonts/feather-font/css/iconfont.css" rel="stylesheet" />
+	<link href="../asset/assets/plugins/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" />
+	<!-- end plugin css -->
+	<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+	<!-- common css -->
+	<link href="../asset/css/app.css" rel="stylesheet" />
+	<!-- end common css -->
+
+</head>
+<body class="sidebar-dark" data-base-url="{{ url('/">
+
+    <script src="../asset/assets/js/spinner.js"></script>
+
+    <div class="main-wrapper" id="app">
+        <!-- Sidebar -->
+		<nav class="sidebar">
+            <!-- Sidebar header / logo -->
+            <div class="sidebar-header">
+                <a href="dashboard.html" class="sidebar-brand">
+                    SM<span> SKRIPSI</span>
+                </a>
+                <div class="sidebar-toggler not-active">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <!-- Akhir sidebar header / logo -->
+            <!-- sidebar list -->
+            <div class="sidebar-body">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="dashboard.html" class="nav-link">
+                          <i class="link-icon" data-feather="box"></i>
+                          <span class="link-title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-category">Bidang Ilmu</li>
+                    <li class="nav-item">
+                        <a href="tema_penelitian.html" class="nav-link">
+                          <i class="link-icon" data-feather="sidebar"></i>
+                          <span class="link-title">Tema Penelitian</span>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-category">Bimbingan & Revisi</li>
+                    <li class="nav-item ">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#bs" role="button"  aria-controls="email">
+                          <i class="link-icon" data-feather="book"></i>
+                          <span class="link-title">Mahasiswa Bimbingan</span>
+                          <i class="link-arrow" data-feather="chevron-down"></i>
+                        </a>
+                        <div class="collapse" id="bs">
+                          <ul class="nav sub-menu">
+                            <li class="nav-item">
+                              <a href="bimbingan_proposal_dosen.html" class="nav-link">Proposal Skripsi</a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="bimbingan_skripsi_dosen.html" class="nav-link">Laporan Skripsi</a>
+                            </li>
+                          </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="daftar_jadwal.html" class="nav-link">
+                            <i class="link-icon" data-feather="sidebar"></i>
+                            <span class="link-title">Daftar Jadwal</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#rev" role="button"  aria-controls="email">
+                          <i class="link-icon" data-feather="book"></i>
+                          <span class="link-title">Revisi</span>
+                          <i class="link-arrow" data-feather="chevron-down"></i>
+                        </a>
+                        <div class="collapse" id="rev">
+                          <ul class="nav sub-menu">
+                            <li class="nav-item">
+                              <a href="sidang_proposal.html" class="nav-link">Sidang Proposal Skripsi</a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="sidang_skripsi.html" class="nav-link">Sidang Laporan Skripsi</a>
+                            </li>
+                          </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-category">Berita Acara</li>
+                    <li class="nav-item">
+                        <a href="berita_acara_proposal.html" class="nav-link">
+                          <i class="link-icon" data-feather="book-open"></i>
+                          <span class="link-title">Sidang Proposal</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="berita_acara_skripsi.html" class="nav-link">
+                          <i class="link-icon" data-feather="file-text"></i>
+                          <span class="link-title">Sidang Skripsi</span>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-category">Lain-lain</li>
+                    <li class="nav-item">
+                        <a href="sekretaris.html" class="nav-link">
+                          <i class="link-icon" data-feather="book-open"></i>
+                          <span class="link-title">Sekretaris</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+             <!-- sidebar list -->
+        </nav>
+        <!-- Ini page wrapper  -->
+		<div class="page-wrapper">
+			<!-- Ini header -->
+            <nav class="navbar">
+                <a class="sidebar-toggler" href="#">
+                    <i data-feather="menu"></i>
+                </a>
+                <div class="navbar-content">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown notifications">
+                            <a aria-expanded="false" aria-haspopup="true" class="notifications nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="notificationDropdown" role="button">
+                                <i data-feather="bell"></i>
+                                <div class="indicator">
+                                    <div class="circle"></div>
+                                </div>
+                            </a>
+                            <div aria-labelledby="notificationDropdown" class="dropdown-menu p-0">
+                                <div class="d-flex align-items-center justify-content-between border-bottom px-3 py-2">
+                                    <p>New Notifications</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center border-top px-3 py-2">
+                                    <a href="javascript:;">View all</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="profile.html" id="profileDropdown" role="button">
+                                <img alt="profile" class="wd-30 ht-30 rounded-circle" src="../asset/img/man_profile.svg">
+                            </a>
+                            <div aria-labelledby="profileDropdown" class="dropdown-menu p-0">
+                                <div class="d-flex flex-column align-items-center border-bottom px-5 py-3">
+                                    <div class="mb-3">
+                                        <img alt="profile" class="wd-80 ht-80 rounded-circle" src="../asset/img/man_profile.svg">
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="tx-16 fw-bolder">Dosen</p>
+                                        <p class="tx-12 text-muted">
+                                            Dosen
+                                        </p>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled p-1">
+                                    <li class="dropdown-item py-2">
+                                        <a href="login.html">
+                                            <i class="icon-md me-2" data-feather="log-out"></i>
+                                            <span>Log Out</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Ini akhir header -->
+            <!-- Ini isi content -->
+			<div class="page-content">
+				
+<link href="../asset/assets2/libs/datatables.net-bs4/datatables.net-bs4.min.css" rel="stylesheet" type="text/css" />
+<link href="../asset/assets2/libs/datatables.net-buttons-bs4/datatables.net-buttons-bs4.min.css" rel="stylesheet" type="text/css" />
+<link href="../asset/assets2/libs/datatables.net-responsive-bs4/datatables.net-responsive-bs4.min.css" rel="stylesheet" type="text/css" />
+
+
+<nav class="page-breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Bimbingan & Revisi</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Proposal Skripsi</li>
+    </ol>
+</nav>
+<div class="row">
+    <div class="col-md-12 stretch-card">
+        <div class="card mb-4">
+            <h5 class="card-header">Data Mahasiswa dan Dosen Pembimbing</h5>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label class="form-label" style="font-weight: bold">NPM </label>
+                            <p><span>{{ $data->kode_unik }}</span></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label class="form-label" style="font-weight: bold">Nama </label>
+                            <p><span>{{ $data->name }}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label class="form-label" style="font-weight: bold">Judul </label>
+                            <p><span>{{ $data->judul }}</span></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label class="form-label" style="font-weight: bold">Bidang Ilmu </label>
+                            <p><span>{{ $data->topik_bidang_ilmu }}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label class="form-label" style="font-weight: bold">Dosen Pembimbing Utama </label>
+                            <p><span>{{ $data->dosen_pembimbing_utama }}</span></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label class="form-label" style="font-weight: bold">Dosen Pembimbing ii </label>
+                            <p><span style="text-transform: capitalize;">{{ $data->dosen_pembimbing_ii }}</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="mb-3">
+        <button type="button" class="btn btn-primary mb-4" onclick="openRevisiModal()">
+            Tambahkan Revisi
+        </button>
+        <input type="hidden" id="idBimbinganProposal" name="idBimbinganProposal" value="{{$data->id_bimbingan_proposal}}">
+        <div class="card mb-4 mb-xl-0">
+            <div class="table-responsive">
+                <table class="table table-bordered" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Bimbingan</th>
+                            <th>Tanggal</th>
+                            <th>Revisi Dosen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td></td>
+                            <td>{{ $item->revisi }}</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td></td>
+                            <td>{{ $item->revisi }}</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td></td>
+                            <td>{{ $item->revisi }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="revisiModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Revisi Proposal</h5>
+            <button type="button" class="close" data-dismiss="modal"
+                aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form id="revisiForm">
+                <div class="form-group">
+                    <label for="revisiInput">Revisi:</label>
+                    <textarea class="form-control" id="revisiInput" name="revisi"
+                        rows="4" cols="50"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Revisi</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+<div id="successAlert" class="alert alert-success" style="display: none;">
+Revisi berhasil dikirim! <button id="okButton" class="btn btn-primary">OK</button>
+</div>
+<div class="mb-3">
+    <div class="card mb-4">
+        <h5 class="card-header">Persetujuan Sidang Proposal</h5>
+        <div class="card-body">
+            <span class="span0-1">Persetujuan Sidang </span>
+            <input type="hidden" id="dospem1" value="{{$data->dosen_pembimbing_utama}}">
+            <input type="hidden" id="dospem2" value="{{$data->dosen_pembimbing_ii}}">
+            <button type="button" id="accProposalBtn" class="btn btn-primary accept-button" onclick="confirmAccProposal('{{ $data->id_bimbingan_proposal }}')">
+                Setujui Proposal
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+
+			</div>
+            <!-- ini akhir isi content -->
+            <!-- ini footer -->
+            <footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between px-4 py-3 border-top small">
+                <p class="text-muted mb-1 mb-md-0">Copyright © <script>document.write(new Date().getFullYear())</script> Sistem Informasi.</p>
+            </footer>
+            
+            <!-- ini akhir footer -->
+		</div>
+	</div>
+
+        <script src="../asset/assets/plugins/flatpickr/flatpickr.min.js"></script>
+        <script src = "../asset/assets/plugins/apexcharts/apexcharts.min.js"></script>
+        <script src="../asset/assets/js/dashboard.js"></script>
+        <!-- base js -->
+        <script src="../asset/js/app.js"></script>
+        <script src="../asset/assets/plugins/feather-icons/feather.min.js"></script>
+        <script src="../asset/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+        <!-- end base js -->
+        <!-- common js -->
+        <script src="../asset/assets/js/template.js"></script>
+        <!-- end common js -->
+    </body>
+</html>
