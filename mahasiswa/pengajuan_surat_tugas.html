@@ -217,24 +217,24 @@
                                             <div class="row">
                                                 <div class="card-group">
                                                     <div class="card">
-                                                    <img src="../asset/img/wizard/pengajuan_judul/step1.svg" class="card-img-top" alt="...">
+                                                    <img src="../asset/img/wizard/surat_tugas/step1.svg" class="card-img-top" alt="...">
                                                     <div class="card-body">
-                                                        <h5 class="card-title text-center">Memilih Bidang Ilmu</h5>
-                                                        <p class="card-text text-center">Mahasiswa dapat memilih judul sesuai dengan bidang ilmu yang tersedia.</p>
+                                                        <h5 class="card-title text-center">Mempersiapkan File</h5>
+                                                        <p class="card-text text-center">File Proposal yang sudah di acc, slip asli pembayaran.</p>
                                                     </div>
                                                     </div>
                                                     <div class="card">
-                                                    <img src="../asset/img/wizard/pengajuan_judul/step2.svg" class="card-img-top" alt="...">
+                                                    <img src="../asset/img/wizard/surat_tugas/step2.svg" class="card-img-top" alt="...">
                                                     <div class="card-body">
-                                                        <h5 class="card-title text-center">mengisi Form Pengajuan</h5>
-                                                        <p class="card-text text-center">Melakukan pengisian form pengajuan proposal, lalu menunggu konfirmasi koordinator.</p>
+                                                        <h5 class="card-title text-center">Mengisi Form Surat Tugas</h5>
+                                                        <p class="card-text text-center">Melakukan pengisian form pengajuan surat tugas.</p>
                                                     </div>
                                                     </div>
                                                     <div class="card">
-                                                    <img src="../asset/img/wizard/pengajuan_judul/step3.svg" class="card-img-top" alt="...">
+                                                    <img src="../asset/img/wizard/surat_tugas/step3.svg" class="card-img-top" alt="...">
                                                     <div class="card-body">
-                                                        <h5 class="card-title text-center">Bimbingan Proposal</h5>
-                                                        <p class="card-text text-center">Selamat! Pengajuan yang anda lakukan telah diterima.</p>
+                                                        <h5 class="card-title text-center">Mengambil Surat Tugas</h5>
+                                                        <p class="card-text text-center">Melakukan pengambilan surat tugas di CSR Jurusan.</p>
                                                     </div>
                                                     </div>
                                                 </div>
@@ -242,92 +242,49 @@
                                         </section>
                                         <h2>Step Kedua</h2>
                                         <section>
-                                            <form action="dashboard.html" method="POST" id="yourFormId">
+                                            <form action="pengajuan_surat_tugas.html" method="POST" enctype="multipart/form-data"  id="yourFormId">
+                                                <div class="mb-3">
+                                                    <label for="judulskripsi" class="form-label">Judul Skripsi</label>
+                                                    <input class="form-control" type="text" id="judulskripsi" value="{{$datas->judul}}" name="judulskripsi" disabled />
+                    
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="dospem1" class="form-label">Dosen Pembimbing 1</label>
+                                                    <input class="form-control" type="text" id="dospem1" name="dospem1" value="{{$datas->dosen_pembimbing_utama}}" disabled />
+                    
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="dospem2" class="form-label">Dosen Pembimbing 2</label>
+                                                    <input class="form-control" type="text" id="dospem2" name="dospem2" value="{{$datas->dosen_pembimbing_ii}}" disabled  />
+                    
+                                                </div>
                                                 <div class="mb-3">
                                                     <label for="name" class="form-label">Nama Mahasiswa</label>
-                                                    <input class="form-control" type="text" id="name" name="nama" readonly autocomplete="nama"/>
+                                                    <input class="form-control" type="text" id="name" name="nama" value="{{Auth::user()->name}}" disabled  />
+                    
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="npm" class="form-label">NPM Mahasiswa</label>
-                                                    <input class="form-control" type="text" id="npm" name="npm" readonly/>
+                                                <label for="npm" class="form-label">NPM Mahasiswa</label>
+                                                <input class="form-control" type="text" id="npm" value="{{Auth::user()->kode_unik}}" name="npm" disabled/>
+                    
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="judul" class="form-label">Rencana Judul Proposal Skripsi</label>
-                                                    <textarea class="form-control" id="judul" name="judul" rows="3" placeholder="Masukan rencana judul penelitian"></textarea>
-                                                    <p class="text-danger"> Maksimal 12 kata.</p>
+                                                    <label for="tanggal_sidang_proposal" class="form-label">Tanggal Sidang Proposal Skripsi</label>
+                                                    <input class="form-control" type="text" value="{{ \Carbon\Carbon::parse($datas->tanggal)->format('d-m-Y" disabled/>
+                                                    <input type="hidden" id="tanggal_sidang_proposal" name="tanggal_sidang_proposal" value="{{$datas->tanggal}}"/>
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="bidang_ilmu" class="form-label">Bidang Ilmu</label>
-                                                    <select class="form-select" id="bidang_ilmu_id" name="bidang_ilmu_id" aria-label="Default select example">
-                                                        <option value="" selected disabled="">Pilih Bidang Ilmu</option>
-                                                    </select>
+                                                    <label for="file_proposal" class="form-label">Upload File Proposal Skripsi</label>
+                                                    <input class="form-control" type="file" name="file_proposal" id="file_proposal" />
+                                                    <p class="text-danger"> File : PDF</p>
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label class="form-label">Mata Kuliah Pilihan Semester VII</label>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="Audit SI-TI" name="mata_kuliah[]" id="audit_si_ti">
-                                                        <label class="form-check-label" for="audit_si_ti">Audit SI-TI</label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="Enterprise Resource Planning" name="mata_kuliah[]" id="erp">
-                                                        <label class="form-check-label" for="erp">Enterprise Resource Planning</label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="Framework Tata Kelola IT" name="mata_kuliah[]" id="FTKIT">
-                                                        <label class="form-check-label" for="FTKIT">Framework Tata Kelola IT</label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="Inovasi SI dan Teknologi Terbaru" name="mata_kuliah[]" id="ISITT">
-                                                        <label class="form-check-label" for="ISITT">Inovasi SI dan Teknologi Terbaru</label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="Recommender System" name="mata_kuliah[]" id="recommender_system">
-                                                        <label class="form-check-label" for="recommender_system">Recommender System</label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="Teknik Peramalan" name="mata_kuliah[]" id="teknik_peramalan">
-                                                        <label class="form-check-label" for="teknik_peramalan">Teknik Peramalan</label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="Business Intelligence" name="mata_kuliah[]" id="business_intelligence">
-                                                        <label class="form-check-label" for="business_intelligence">Business Intelligence</label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="Perencanaan Strategis SI-TI" name="mata_kuliah[]" id="perencanaan_strategis_si_ti">
-                                                        <label class="form-check-label" for="perencanaan_strategis_si_ti">Perencanaan Strategis SI-TI</label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="Manajemen Layanan" name="mata_kuliah[]" id="manajemen_layanan_si_ti">
-                                                        <label class="form-check-label" for="manajemen_layanan_si_ti">Manajemen Layanan SI-TI</label>
-                                                    </div>
+                                                    <label for="file_slip_pembayaran" class="form-label">Upload File Slip Pembayaran Surat Tugas</label>
+                                                    <input class="form-control" type="file" name="file_slip_pembayaran" id="file_slip_pembayaran" />
+                                                    <p class="text-danger"> File : PDF</p>
                                                 </div>
-                                                <div class="mb-3">
-                                                    <label class="form-label">Mata Kuliah Pilihan Semester VIII</label>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="Manajemen Kualitas SI/TI" name="mata_kuliah[]" id="manajemen_kualitas_si_ti">
-                                                        <label class="form-check-label" for="manajemen_kualitas_si_ti">Manajemen Kualitas SI/TI</label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="Manajemen Resiko SI/TI" name="mata_kuliah[]" id="manajemen_resiko_si_ti">
-                                                        <label class="form-check-label" for="manajemen_resiko_si_ti">Manajemen Resiko SI/TI</label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="Model dan Simulasi Sistem" name="mata_kuliah[]" id="model_dan_simulasi_sistem">
-                                                        <label class="form-check-label" for="model_dan_simulasi_sistem">Model dan Simulasi Sistem</label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="Rekayasa Kebutuhan" name="mata_kuliah[]" id="rekayasa_kebutuhan">
-                                                        <label class="form-check-label" for="rekayasa_kebutuhan">Rekayasa Kebutuhan</label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="Sistem Informasi Intelegensia" name="mata_kuliah[]" id="sistem_informasi_intelegensia">
-                                                        <label class="form-check-label" for="sistem_informasi_intelegensia">Sistem Informasi Intelegensia</label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="Testing dan Implementasi SI" name="mata_kuliah[]" id="testing_dan_implementasi_si">
-                                                        <label class="form-check-label" for="sistem_informasi_intelegensia">Testing dan Implementasi SI</label>
-                                                    </div>
-                                                </div>
+                                                <input type="hidden" name="users_id" value="{{Auth::user()->id}}">
+                                                <input type="hidden" name="bimbingan_proposal_id" value="{{$datas->id_bimbingan_proposal}}">
                                             </form>
                                         </section>
                                     </div>
@@ -382,24 +339,21 @@
         });
 
         function showConfirmation() {
-        var bidangIlmu = $('#bidang_ilmu_id').val();
-        var judul = $('#judul').val();
-
-        var jumlahKata = judul.split(/\s+/).length;
-       Swal.fire({
-                title: 'Are you sure?',
-                text: 'Apakah Anda ingin menyimpan perubahan?',
-                icon: 'question',
-                showCancelButton: true,
-                confirmButtonText: 'Yes',
-                cancelButtonText: 'No',
-            }).then((result) => {
-                if (result.isConfirmed) {
-                // Jika pengguna mengklik "Yes," panggil fungsi saveChanges
+    // Use SweetAlert to show a simple confirmation message
+        Swal.fire({
+            title: 'Are you sure?',
+            text: 'Apakah Anda ingin menyimpan perubahan?',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // If the user clicks "Yes," submit the form
                 saveChanges();
-                }
-            });
-        }
+            }
+        });
+    }    
 
         function saveChanges() {
         // Anda dapat menambahkan logika untuk menyimpan perubahan ke server di sini
