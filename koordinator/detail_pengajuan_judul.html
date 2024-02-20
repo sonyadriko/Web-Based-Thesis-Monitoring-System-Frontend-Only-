@@ -228,31 +228,34 @@
                                 <form action="detail_pengajuan_judul_after.html" method="POST" id="form-id">
                                     <div class="mb-3">
                                         <label for="name" class="form-label">Nama Mahasiswa</label>
-                                        <input class="form-control" type="text" id="name" name="nama" value="{{ $data->name }}" readonly disabled/>
+                                        <input class="form-control" type="text" id="name" name="nama" value="Aji Nugroho" readonly disabled/>
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="npm" class="form-label">NPM Mahasiswa</label>
-                                        <input class="form-control" type="text" id="npm" value="{{ $data->kode_unik }}" name="npm" placeholder="13.2019.1.00819" readonly disabled />
+                                        <input class="form-control" type="text" id="npm" value="13.2019.1.00786" name="npm" placeholder="13.2019.1.00819" readonly disabled />
                                     </div>
                                     <div class="mb-3">
                                         <label for="judul" class="form-label">Rencana Judul Proposal Skripsi</label>
-                                        <input class="form-control" type="text" id="judul" value="{{ $data->judul }}" name="judul" placeholder="13.2019.1.00819" readonly disabled/>
+                                        <input class="form-control" type="text" id="judul" value="Perancangan Sistem Penyewaan Ruangan menggunakan Metode Prototype dengan berbasis website" name="judul" placeholder="13.2019.1.00819" readonly disabled/>
                                     </div>
                                     <div class="mb-3">
                                         <label for="tbi" class="form-label">Topik Bidang Ilmu</label>
-                                        <input class="form-control" type="text" id="tbi" value="{{ $data->topik_bidang_ilmu }}" name="tbi" readonly disabled/>
+                                        <input class="form-control" type="text" id="tbi" value="Rekayasa Perangkat Lunak" name="tbi" readonly disabled/>
                                     </div>
                                     <div class="mb-3">
                                         <label for="tbi" class="form-label">Mata Kuliah Pilihan Semester VIII dan VII</label>
-                                        <input class="form-control" type="text" id="tbi" value="{{ $data->mk_pilihan }}" name="tbi" readonly disabled/>
+                                        <input class="form-control" type="text" id="tbi" value="SI Intelegensia, PSSI, Data science" name="tbi" readonly disabled/>
                                     </div>
                                     <div class="mb-3">
                                         <label for="dosen_pembimbing_utama" class="form-label">Dosen Pembimbing Utama</label>
                                         <select class="form-select" id="select1" name="dosen_pembimbing_utama" aria-label="Default select example">
                                             <option value="" selected disabled>Open this select menu</option>
                                             @foreach($dosen2 as $dosen)
-                                                <option value="{{ $dosen->name }}">{{ $dosen->name }}</option>
+                                                <option value="{{ $dosen->name }}">Rachman Arief</option>
+                                                <option value="{{ $dosen->name }}">Sulistyowati</option>
+                                                <option value="{{ $dosen->name }}">Isa Albanna</option>
+                                                <option value="{{ $dosen->name }}">Budanis Dwi Meilani</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -260,6 +263,9 @@
                                         <label for="dosen_pembimbing_ii" class="form-label">Dosen Pembimbing II</label>
                                         <select class="form-select" id="select2" name="dosen_pembimbing_ii" aria-label="Default select example">
                                             <option value="" selected disabled>Open this select menu</option>
+                                            <option value="{{ $dosen->name }}">Sulistyowati</option>
+                                            <option value="{{ $dosen->name }}">Isa Albanna</option>
+                                            <option value="{{ $dosen->name }}">Budanis Dwi Meilani</option>
                                             <option value="Tidak Ada">Tidak Ada</option>
                                         </select>
                                     </div>

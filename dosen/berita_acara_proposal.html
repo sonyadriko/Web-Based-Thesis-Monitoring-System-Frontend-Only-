@@ -9,7 +9,7 @@
 	<meta content="ITATS" name="author">
 	<meta content="bootstrap, bootstrap 5, bootstrap5, admin, dashboard, template, responsive, css, sass, html, laravel, theme, front-end, ui kit, web" name="keywords">
 
-	<title>Berita Acara Sidang Proposal</title>
+	<title>Berita Acara Sidang Proposal</title> 
 
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com" rel="preconnect">
@@ -234,7 +234,8 @@
                         <label for="tahunFilter">Filter Angkatan:</label>
                         <select id="tahunFilter" class="form-control">
                             <option value="">Semua</option>
-                                <option value="{{ $year->nama_angkatan }}">{{ $year->nama_angkatan }}</option>
+                                <option value="{{ $year->nama_angkatan }}">2019</option>
+                                <option value="{{ $year->nama_angkatan }}">2020</option>
                         </select>
                     </div>
                 </div>
@@ -252,26 +253,26 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>{{ $ba->name }}</td>
-                            <td>{{ $ba->kode_unik }}</td>
-                            <td>{{ $ba->nama_ruangan }}</td>
-                            <td>{{ $formatTanggal }}</td>
+                            <td>13.2019.1.00820</td>
+                            <td>Sony Adi Adriko</td>
+                            <td>A-404</td>
+                            <td>Wednesday, 14 February 2024</td>
                             <td><a href="detail_berita_acara_proposal.html" class="btn btn-primary">Detail</a></td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>{{ $ba->name }}</td>
-                            <td>{{ $ba->kode_unik }}</td>
-                            <td>{{ $ba->nama_ruangan }}</td>
-                            <td>{{ $formatTanggal }}</td>
+                            <td>13.2019.1.00789</td>
+                            <td>Novantio Ary widyatama</td>
+                            <td>A-108</td>
+                            <td>Friday, 23 February 2024</td>
                             <td><a href="detail_berita_acara_proposal.html" class="btn btn-primary">Detail</a></td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>{{ $ba->name }}</td>
-                            <td>{{ $ba->kode_unik }}</td>
-                            <td>{{ $ba->nama_ruangan }}</td>
-                            <td>{{ $formatTanggal }}</td>
+                            <td>13.2019.1.00781</td>
+                            <td>Aji Nugroho</td>
+                            <td>A-404</td>
+                            <td>Tuesday, 07 November 2023</td>
                             <td><a href="detail_berita_acara_proposal.html" class="btn btn-primary">Detail</a></td>
                         </tr>
                     </tbody>

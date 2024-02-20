@@ -233,7 +233,9 @@
                         <select id="tahunFilter" class="form-control">
                             <option value="">Semua</option>
                             @foreach($angkatan as $year)
-                                <option value="{{ $year->nama_angkatan }}">{{ $year->nama_angkatan }}</option>
+                                <option value="{{ $year->nama_angkatan }}">2019</option>
+                                <option value="{{ $year->nama_angkatan }}">2020</option>
+                                <option value="{{ $year->nama_angkatan }}">2021</option>
                             @endforeach
                         </select>
                     </div>
@@ -252,33 +254,30 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>{{ $data->kode_unik }}</td>
-                            <td>{{ $data->name }}</td>
+                            <td>13.2019.1.00849</td>
+                            <td>M. Ikhwan Firdaus</td>
                             <td>
-                                {{ implode(' ', array_slice(str_word_count($data->judul, 1), 0, 6)) }}...
-                                Belum Mengajukan
+                                Penerapan Metode Design Thinking pada user interface dan ...
                             </td>
-                            <td>{{ $data->dosen_pembimbing_utama ?? 'Belum Mengajukan' }}</td>
+                            <td>Anwar Sodik</td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>{{ $data->kode_unik }}</td>
-                            <td>{{ $data->name }}</td>
+                            <td>13.2019.1.00819</td>
+                            <td>Sony Adi Adriko</td>
                             <td>
-                                {{ implode(' ', array_slice(str_word_count($data->judul, 1), 0, 6)) }}...
                                 Belum Mengajukan
                             </td>
-                            <td>{{ $data->dosen_pembimbing_utama ?? 'Belum Mengajukan' }}</td>
+                            <td>Sulistyowati</td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>{{ $data->kode_unik }}</td>
-                            <td>{{ $data->name }}</td>
+                            <td>13.2019.1.00861</td>
+                            <td>Helma Setiawan</td>
                             <td>
-                                {{ implode(' ', array_slice(str_word_count($data->judul, 1), 0, 6)) }}...
-                                Belum Mengajukan
+                                Analisis Sentimen pada penggunaan aplikasi dengan metode ...
                             </td>
-                            <td>{{ $data->dosen_pembimbing_utama ?? 'Belum Mengajukan' }}</td>
+                            <td>Shah Khadafi</td>
                         </tr>
                     </tbody>
                 </table>

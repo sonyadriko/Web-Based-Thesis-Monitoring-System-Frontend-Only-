@@ -226,33 +226,33 @@
                             <h5 class="card-header">Form Pengajuan</h5>
                             <div class="card-body">
                                 <div class="mb-3">
-                                    <label for="name" class="form-label">Nama Mahasiswa</label>
-                                    <input class="form-control" type="text" id="name" name="nama" value="{{ $data->name }}" readonly disabled/>
-                                </div>
+                                        <label for="name" class="form-label">Nama Mahasiswa</label>
+                                        <input class="form-control" type="text" id="name" name="nama" value="Aji Nugroho" readonly disabled/>
+                                    </div>
 
-                                <div class="mb-3">
-                                    <label for="npm" class="form-label">NPM Mahasiswa</label>
-                                    <input class="form-control" type="text" id="npm" value="{{ $data->kode_unik }}" name="npm" placeholder="13.2019.1.00819" readonly disabled />
-                                </div>
-                                <div class="mb-3">
-                                    <label for="judul" class="form-label">Rencana Judul Proposal Skripsi</label>
-                                    <input class="form-control" type="text" id="judul" value="{{ $data->judul }}" name="judul" placeholder="13.2019.1.00819" readonly disabled/>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="tbi" class="form-label">Topik Bidang Ilmu</label>
-                                    <input class="form-control" type="text" id="tbi" value="{{ $data->topik_bidang_ilmu }}" name="tbi" readonly disabled/>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="tbi" class="form-label">Mata Kuliah Pilihan Semester VIII dan VII</label>
-                                    <input class="form-control" type="text" id="tbi" value="{{ $data->mk_pilihan }}" name="tbi" readonly disabled/>
-                                </div>
+                                    <div class="mb-3">
+                                        <label for="npm" class="form-label">NPM Mahasiswa</label>
+                                        <input class="form-control" type="text" id="npm" value="13.2019.1.00786" name="npm" placeholder="13.2019.1.00819" readonly disabled />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="judul" class="form-label">Rencana Judul Proposal Skripsi</label>
+                                        <input class="form-control" type="text" id="judul" value="Perancangan Sistem Penyewaan Ruangan menggunakan Metode Prototype dengan berbasis website" name="judul" placeholder="13.2019.1.00819" readonly disabled/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="tbi" class="form-label">Topik Bidang Ilmu</label>
+                                        <input class="form-control" type="text" id="tbi" value="Rekayasa Perangkat Lunak" name="tbi" readonly disabled/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="tbi" class="form-label">Mata Kuliah Pilihan Semester VIII dan VII</label>
+                                        <input class="form-control" type="text" id="tbi" value="SI Intelegensia, PSSI, Data science" name="tbi" readonly disabled/>
+                                    </div>
                                 <div class="mb-3">
                                     <label for="tbi" class="form-label">Dosen Pembimbing Utama</label>
-                                    <input class="form-control" type="text" id="tbi" value="{{ $data2->dosen_pembimbing_utama ?? 'Pengajuan ditolak' }}" name="tbi" readonly disabled/>
+                                    <input class="form-control" type="text" id="tbi" value="Rachman Arief" name="tbi" readonly disabled/>
                                 </div>
                                 <div class="mb-3">
                                     <label for="tbi" class="form-label">Dosen Pembimbing II</label>
-                                    <input class="form-control" style="text-transform: capitalize;" type="text" id="tbi" value="{{ $data2->dosen_pembimbing_ii ?? 'Pengajuan ditolak' }}" name="tbi" readonly disabled/>
+                                    <input class="form-control" style="text-transform: capitalize;" type="text" id="tbi" value="Tidak Ada" name="tbi" readonly disabled/>
                                 </div>
                                 <input type="hidden" name="pengajuan_id" value="{{ $data->id_pengajuan_judul }}" />
                                 <input type="hidden" name="bidang_ilmu_id" value="{{ $data->bidang_ilmu_id }}" />

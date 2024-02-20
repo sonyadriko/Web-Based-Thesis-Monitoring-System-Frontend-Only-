@@ -87,13 +87,13 @@
                     <li class="nav-item nav-category">Data</li>
                     <li class="nav-item">
                         <a href="data_mahasiswa.html" class="nav-link">
-                          <i class="link-icon" data-feather="sidebar"></i>
+                          <i class="link-icon" data-feather="users"></i>
                           <span class="link-title">Mahasiswa</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="data_dosen.html" class="nav-link">
-                          <i class="link-icon" data-feather="sidebar"></i>
+                          <i class="link-icon" data-feather="user-check"></i>
                           <span class="link-title">Dosen</span>
                         </a>
                     </li>
@@ -210,18 +210,26 @@
                                     <tbody>
                                         <tr>
                                             <td>1</td>
-                                            <td>{{ $data->kode_unik }}</td>
-                                            <td>{{ $data->name }}</td>
-                                            <td>{{ $data->dosen_pembimbing_utama ?? 'Tidak Ada' }}</td>
+                                            <td>13.2019.1.00819</td>
+                                            <td>Sony Adi Adriko</td>
+                                            <td>Sulistyowati</td>
                                             <td><span class="mt-2"><strong>Revisi Sidang Proposal</strong></span></td>
                                             <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#detailModal{{ $data->id }}">Detail</button></td>
                                         </tr>
                                         <tr>
                                             <td>2</td>
-                                            <td>{{ $data->kode_unik }}</td>
-                                            <td>{{ $data->name }}</td>
-                                            <td>{{ $data->dosen_pembimbing_utama ?? 'Tidak Ada' }}</td>
-                                            <td><span class="mt-2"><strong>Revisi Sidang Proposal</strong></span></td>
+                                            <td>13.2019.1.00849</td>
+                                            <td>M. Ikhwan Firdauas</td>
+                                            <td>Anwar Sodik</td>
+                                            <td><span class="mt-2"><strong>Revisi Sidang Skripsi</strong></span></td>
+                                            <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#detailModal{{ $data->id }}">Detail</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>13.2020.1.90182</td>
+                                            <td>Musa Al Farid</td>
+                                            <td>Anwar Sodik</td>
+                                            <td><span class="mt-2"><strong>Pengajuan Judul</strong></span></td>
                                             <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#detailModal{{ $data->id }}">Detail</button></td>
                                         </tr>
                                     </tbody>
