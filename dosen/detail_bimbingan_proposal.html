@@ -360,5 +360,135 @@ Revisi berhasil dikirim! <button id="okButton" class="btn btn-primary">OK</butto
         <!-- common js -->
         <script src="../asset/assets/js/template.js"></script>
         <!-- end common js -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <script>
+            function openRevisiModal() {
+                 // Open the modal
+                 $('#revisiModal').modal('show');
+         
+                 // Optionally, you can set other values or perform other actions here
+         
+             }
+        </script>
+         
+        <script>
+            // Pastikan dokumen telah dimuat sepenuhnya
+            document.addEventListener('DOMContentLoaded', function() {
+                // Ambil elemen 'revisiForm' jika ada
+                var revisiForm = document.getElementById('revisiForm');
+         
+                // Periksa apakah elemen 'revisiForm' ditemukan
+                if (revisiForm) {
+                    // Tambahkan event listener untuk saat form di-submit
+                    revisiForm.addEventListener('submit', function(event) {
+                        event.preventDefault();
+         
+                        var revisiInput = document.getElementById("revisiInput").value;
+                         var idBimbinganProposal = document.getElementById('idBimbinganProposal').value;
+                        console.log('Revisi yang dikirim:', revisiInput);
+                        console.log('ID Bimbingan Proposal:', idBimbinganProposal);
+         
+                        axios.post(`#`, {
+                            revisi: revisiInput,
+                            idBimbinganProposal: idBimbinganProposal
+                        })
+                        .then(function (response) {
+                            console.log('Respon dari server:', response.data);
+                            $('#revisiModal').modal('hide'); // Tutup modal setelah berhasil submit
+         
+                            Swal.fire({
+                                title: 'Revisi berhasil dikirim!',
+                                icon: 'success',
+                                confirmButtonText: 'OK'
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    // Lakukan refresh halaman
+                                    location.reload();
+                                }
+                            });
+                        })
+                        .catch(function (error) {
+                            console.error("Terjadi kesalahan: " + error);
+                        });
+                    });
+                } else {
+                    console.error("Elemen 'revisiForm' tidak ditemukan.");
+                }
+            });
+         
+         
+            function confirmAccProposal(idBimbinganProposal) {
+             var dospem1Element = document.getElementById('dospem1');
+             var dospem2Element = document.getElementById('dospem2');
+         
+             // Check if the elements exist before accessing their values
+             if (dospem1Element && dospem2Element) {
+                 const dospem1 = dospem1Element.value;
+                 const dospem2 = dospem2Element.value;
+         
+                 Swal.fire({
+                     title: 'Apakah anda yakin acc proposal ini?',
+                     icon: 'question',
+                     showCancelButton: true,
+                     confirmButtonText: 'Ya',
+                     cancelButtonText: 'Tidak'
+                 }).then((result) => {
+                     if (result.isConfirmed) {
+                         accProposal(idBimbinganProposal, dospem1, dospem2);
+                     }
+                 });
+             } else {
+                 console.error("Elemen 'dospem1' or 'dospem2' not found.");
+             }
+         }
+         
+         
+         function accProposal(idBimbinganProposal, dospem1, dospem2) {
+            const data = {
+                dospem1: dospem1,
+                dospem2: dospem2
+            };
+         
+            axios.post(`#`, data)
+                .then(function (response) {
+                    console.log('Response from the server:', response.data);
+         
+                    // Show success message using SweetAlert
+                    Swal.fire({
+                        title: 'Proposal berhasil diacc!',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            location.reload();  // Reload the page
+                        }
+                    });
+                })
+                .catch(function (error) {
+                    // Handle JSON response failure
+                    console.error('Terjadi kesalahan:', error);
+                    if (error.response && error.response.data) {
+                        // If the response contains error message
+                        Swal.fire({
+                            title: 'Terjadi kesalahan',
+                            text: error.response.data.message,
+                            icon: 'error',
+                            confirmButtonText: 'OK'
+                        });
+                    } else {
+                        // If the response does not contain error message
+                        Swal.fire({
+                            title: 'Terjadi kesalahan',
+                            text: 'Gagal memproses permintaan.',
+                            icon: 'error',
+                            confirmButtonText: 'OK'
+                        });
+                    }
+                });
+         }
+         
+         </script>
     </body>
 </html>
