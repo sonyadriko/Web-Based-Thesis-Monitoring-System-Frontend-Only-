@@ -280,7 +280,7 @@
                     <div class="container-xxl flex-grow-1 container-p-y">
                         <div class="card mb-3">
                             <h5 class="card-header">Review Dosen Pembimbing</h5>
-                            <form action="{{route('berita-acara-skripsi.store')}}" method="POST" id="reviewForm">
+                            <form action="#" method="POST" id="reviewForm">
                             <div class="card-body">
                                 <div class="mb-3">
                                     <label for="revisi" class="form-label">Revisi</label>
@@ -345,5 +345,63 @@
         <!-- common js -->
         <script src="../asset/assets/js/template.js"></script>
         <!-- end common js -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+
+    <script>
+        function submitForm() {
+            // Validasi revisi dan nilai
+            var revisi = document.getElementById('revisi').value;
+            var nilai_1 = document.getElementById('nilai_1').value;
+            var nilai_2 = document.getElementById('nilai_2').value;
+            var nilai_3 = document.getElementById('nilai_3').value;
+            var nilai_4 = document.getElementById('nilai_4').value;
+            var nilai_5 = document.getElementById('nilai_5').value;
+
+            nilai_1 = parseInt(nilai_1);
+            nilai_2 = parseInt(nilai_2);
+            nilai_3 = parseInt(nilai_3);
+            nilai_4 = parseInt(nilai_4);
+            nilai_5 = parseInt(nilai_5);
+
+
+            if (!revisi.trim() || nilai_1 > 100 || nilai_2 > 100 || nilai_3 > 100 || nilai_4 > 100 || nilai_5 > 100 ) {
+                Swal.fire({
+                    title: 'Error',
+                    text: 'Revisi dan nilai harus diisi dengan benar (nilai maksimal 100).',
+                    icon: 'error',
+                });
+            } else {
+                showConfirmation();
+            }
+        }
+
+        function showConfirmation() {
+        Swal.fire({
+            title: 'Konfirmasi Submit',
+            text: 'Apakah Anda yakin ingin submit data?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'Ya, Submit!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: 'Success',
+                    text: 'Data berhasil disubmit.',
+                    icon: 'success',
+                }).then(() => {
+                    // Submit form
+                    document.getElementById('reviewForm').submit();
+                }).then(() => {
+                    // Redirect to dashboard after successful submission
+                    // window.location.href = '/dashboard'; // Ganti dengan route dashboard yang sesuai
+                });
+            }
+        });
+    }
+
+
+    </script>
     </body>
 </html>
