@@ -6,10 +6,10 @@
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<meta content="ie=edge" http-equiv="X-UA-Compatible">
 	<meta content="Sistem Manajemen Skripsi" name="description">
-	<meta content="ITATS" name="author">
+    <meta content="ITATS" name="author">
 	<meta content="bootstrap, bootstrap 5, bootstrap5, admin, dashboard, template, responsive, css, sass, html, laravel, theme, front-end, ui kit, web" name="keywords">
 
-	<title>Revisi Sidang Skripsi</title>
+	<title>Detail Revisi Sidang Skripsi</title>
 
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com" rel="preconnect">
@@ -17,7 +17,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 	<!-- End fonts -->
 
-	<link href="../asset//favicon.ico" rel="shortcut icon">
+	<link href="../asset/favicon.ico" rel="shortcut icon">
 
 	<!-- plugin css -->
 	<link href="../asset/assets/fonts/feather-font/css/iconfont.css" rel="stylesheet" />
@@ -29,40 +29,14 @@
 	<link href="../asset/css/app.css" rel="stylesheet" />
 	<!-- end common css -->
 
-	<style>
-		.text-center {
-			text-align: center !important;
-		}
-
-		.tx-16 {
-			font-size: 16px;
-		}
-
-		.fw-bold {
-			font-weight: 500 !important;
-		}
-	</style>
-
-    <!-- preloader css -->
-    <link href="../asset/assets2/css/preloader.min.css" rel="stylesheet" type="text/css" />
-
-    <!-- Bootstrap Css -->
-    <link href="../asset/assets2/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
-    <!-- Icons Css -->
-    <link href="../asset/assets2/css/icons.min.css" rel="stylesheet" type="text/css" />
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap">
-
-
-	
 </head>
-
 <body class="sidebar-dark" data-base-url="{{ url('/">
 
-	<script src="../asset/assets/js/spinner.js"></script>
+    <script src="../asset/assets/js/spinner.js"></script>
 
-	<div class="main-wrapper" id="app">
-         <nav class="sidebar">
+    <div class="main-wrapper" id="app">
+        <!-- Sidebar -->
+		<nav class="sidebar">
             <!-- Sidebar header / logo -->
             <div class="sidebar-header">
                 <a href="dashboard.html" class="sidebar-brand">
@@ -156,8 +130,10 @@
             </div>
              <!-- sidebar list -->
         </nav>
+        <!-- Ini page wrapper  -->
 		<div class="page-wrapper">
-        <nav class="navbar">
+			<!-- Ini header -->
+            <nav class="navbar">
                 <a class="sidebar-toggler" href="#">
                     <i data-feather="menu"></i>
                 </a>
@@ -208,8 +184,10 @@
                     </ul>
                 </div>
             </nav>
+            <!-- Ini akhir header -->
+            <!-- Ini isi content -->
 			<div class="page-content">
-          
+
 <link href="../asset/assets2/libs/datatables.net-bs4/datatables.net-bs4.min.css" rel="stylesheet" type="text/css" />
 <link href="../asset/assets2/libs/datatables.net-buttons-bs4/datatables.net-buttons-bs4.min.css" rel="stylesheet" type="text/css" />
 <link href="../asset/assets2/libs/datatables.net-responsive-bs4/datatables.net-responsive-bs4.min.css" rel="stylesheet" type="text/css" />
@@ -221,154 +199,279 @@
     </ol>
 </nav>
 <div class="row">
-    <div class="col-12">
-        <div class="card">
-            <div class="card-header">
-                <h4 class="card-title" style="font-weight: bold">Revisi Mahasiswa Sidang Skripsi</h4>
-                <p class="card-title-desc">Tabel berikut merupakan list mahasiswa yang telah melakukan sidang dan masih memerlukan revisi pada skripsinya.</code>.
-                </p>
-            </div>
-            <div class="card-body table-responsive">
-                <div class="row mb-3">
-                    <div class="col-md-2">
-                        <label for="tahunFilter">Filter Angkatan:</label>
-                        <select id="tahunFilter" class="form-control">
-                            <option value="">Semua</option>
-                            @foreach($angkatan as $year)
-                                <option value="{{ $year->nama_angkatan }}">{{ $year->nama_angkatan }}</option>
-                            @endforeach
-                        </select>
+    <div class="col-md-12 stretch-card">
+        <div class="card mb-4">
+            <h5 class="card-header">Revisi Sidang Skripsi</h5>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label class="form-label" style="font-weight: bold">NPM </label>
+                            <p><span>{{ $data->kode_unik }}</span></p>
+                        </div>
                     </div>
-                    <div class="col-md-2">
-                        <label for="statusFilter">Filter Sebagai:</label>
-                        <select id="statusFilter" class="form-control">
-                            <option value="">Semua</option>
-                            <option value="Dosen Penguji 1">Dosen Penguji 1</option>
-                            <option value="Dosen Penguji 2">Dosen Penguji 2</option>
-                            <option value="Dosen Penguji 3">Dosen Penguji 3</option>
-                            <option value="Dosen Pembimbing">Dosen Pembimbing</option>
-                        </select>
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label class="form-label" style="font-weight: bold">Nama </label>
+                            <p><span>{{ $data->name }}</span></p>
+                        </div>
                     </div>
                 </div>
-                <table id="datatable" class="table table-bordered dt-responsive  nowrap w-100">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label class="form-label" style="font-weight: bold">Bidang Ilmu </label>
+                            <p><span>{{ $data->judul }}</span></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label class="form-label" style="font-weight: bold">Bidang Ilmu </label>
+                            <p><span>{{ $data->topik_bidang_ilmu }}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label class="form-label" style="font-weight: bold">Dosen Pembimbing Utama </label>
+                            <p><span>{{ $data->dosen_pembimbing_utama }}</span></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label class="form-label" style="font-weight: bold">Dosen Pembimbing II </label>
+                            <p><span>{{ $data->dosen_pembimbing_ii }}</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<button type="button" class="btn btn-primary justify-content-end mb-4" onclick="openRevisiModal()">
+    Tambahkan Revisi
+</button>
+<input type="hidden" id="idRevisiBimbinganSkripsi" name="idRevisiBimbinganSkripsi" value="{{$data->id_revisi_sidang_skripsi}}">
+
+<div class="row">
+    <div class="mb-3">
+        <div class="card mb-4 mb-xl-0">
+            <div class="table-responsive">
+                <table class="table table-bordered" width="100%" cellspacing="0">
                     <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Nama</th>
-                        <th>NPM</th>
-                        <th>Judul</th>
-                        <th>Bidang Ilmu</th>
-                        <th>Sebagai</th>
-                        <th>Action</th>
-                    </tr>
+                        <tr>
+                            <th>No</th>
+                            <th>Tanggal</th>
+                            <th>Revisi</th>
+                        </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>{{ $no }}</td>
-                            <td>{{ $dosen->name }}</td>
-                            <td>{{ $dosen->kode_unik }}</td>
-                            <td>{{ implode(' ', array_slice(str_word_count($dosen->judul, 1), 0, 6)) }}...</td>
-                            <td>{{ $dosen->topik_bidang_ilmu }}</td>
-                            <td>Dosen Pembimbing</td>
-                            <td><a href="detail_sidang_skripsi.html" class="btn btn-primary">Cek Revisi</a></td>
+                            <td>{{ \Carbon\Carbon::parse($item->created_at)->format('d-m-Y H:i:s')}}</td>
+                            <td>{{ $item->revisi }}</td>
                         </tr>
                     </tbody>
                 </table>
-
             </div>
         </div>
-    </div> <!-- end col -->
-</div> <!-- end row -->
+    </div>
+</div>
 
-
-                        
+<div class="modal fade" id="revisiModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Revisi Skripsi</h5>
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
+            <div class="modal-body">
+                <form id="revisiForm">
+                    <input type="hidden" id="idBeritaAcara" name="id_berita_acara_s">
+                    <div class="form-group">
+                        <label for="revisiInput">Revisi:</label>
+                        <textarea class="form-control" id="revisiInput" name="revisi"
+                            rows="4" cols="50"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-4">Submit Revisi</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="successAlert" class="alert alert-success" style="display: none;">
+    Revisi berhasil dikirim! <button id="okButton" class="btn btn-primary">OK</button>
+</div>
+<div class="row">
+    <div class="mb-3">
+        <div class="card mb-4">
+            <h5 class="card-header">Persetujuan Revisi Sidang Skripsi</h5>
+            <div class="card-body">
+                <span class="span0-1">Persetujuan Revisi </span>
+                <button type="button" id="penguji1" value="{{ $data->nama_penguji_1 }}" class="btn btn-primary accept-button" onclick="confirmAccSkripsi('{{ $data->id_berita_acara_s }}')">
+                    Setujui Skripsi
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script>
+    function openRevisiModal() {
+         // Open the modal
+        //  const addButton = document.getElementById('tambahkanRevisiButton');
+        //     if (addButton && addButton.style.display !== 'none') {
+                // Open the modal
+                $('#revisiModal').modal('show');
+                // Optionally, you can set other values or perform other actions here
+            // }
+
+         // Optionally, you can set other values or perform other actions here
+     }
+ </script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Ambil elemen 'revisiForm' jika ada
+        var revisiForm = document.getElementById('revisiForm');
+
+        // Periksa apakah elemen 'revisiForm' ditemukan
+        if (revisiForm) {
+            // Tambahkan event listener untuk saat form di-submit
+            revisiForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                var revisiInput = document.getElementById("revisiInput").value;
+                var idRevisiBimbinganSkripsi = document.getElementById('idRevisiBimbinganSkripsi').value;
+
+                console.log('Revisi yang dikirim:', revisiInput);
+                console.log('ID Berita Acara:', idRevisiBimbinganSkripsi);
+
+                axios.post(``, {
+                    revisiInput: revisiInput,
+                    idRevisiBimbinganSkripsi: idRevisiBimbinganSkripsi
+                })
+                .then(function (response) {
+                    console.log('Respon dari server:', response.data);
+                    $('#revisiModal').modal('hide'); // Tutup modal setelah berhasil submit
+
+                    Swal.fire({
+                        title: 'Revisi berhasil dikirim!',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            // Lakukan refresh halaman
+                            location.reload();
+                        }
+                    });
+                })
+                .catch(function (error) {
+                    console.error("Terjadi kesalahan: " + error);
+                });
+            });
+        } else {
+            console.error("Elemen 'revisiForm' tidak ditemukan.");
+        }
+    });
+</script>
+
+<script>
+function confirmAccSkripsi(idBeritaAcara) {
+
+
+
+
+    Swal.fire({
+        title: 'Apakah Anda yakin ingin acc revisi ini?',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Ya',
+        cancelButtonText: 'Tidak'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            accSkripsi();
+        }
+    });
+}
+
+
+function accSkripsi() {
+    const data = {
+    };
+    axios.post(``, data)
+        .then(function (response) {
+            // Show success message using SweetAlert
+            Swal.fire({
+                title: 'Revisi Skripsi berhasil diacc!',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.reload();  // Reload the page
+                }
+            });
+        })
+        .catch(function (error) {
+            // Handle JSON response failure
+            console.error('Terjadi kesalahan:', error);
+            if (error.response && error.response.data) {
+                // If the response contains error message
+                Swal.fire({
+                    title: 'Terjadi kesalahan',
+                    text: error.response.data.message,
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+            } else {
+                // If the response does not contain error message
+                Swal.fire({
+                    title: 'Terjadi kesalahan',
+                    text: 'Gagal memproses permintaan.',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+            }
+        });
+}
+
+
+</script>
+
+				
+			</div>
             <!-- ini akhir isi content -->
             <!-- ini footer -->
             <footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between px-4 py-3 border-top small">
                 <p class="text-muted mb-1 mb-md-0">Copyright © <script>document.write(new Date().getFullYear())</script> Sistem Informasi.</p>
             </footer>
+            
+            <!-- ini akhir footer -->
 		</div>
 	</div>
 
-	 <!-- Base JS -->
-     <script src="../asset/js/app.js"></script>
-     <script src="../asset/assets/plugins/feather-icons/feather.min.js"></script>
-     <script src="../asset/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-     <!-- End Base JS -->
 
-        <!-- jQuery -->
-        <script
-        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-
-    <!-- Bootstrap JS -->
-    <script
-        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-
-    <script src="../asset/assets/plugins/flatpickr/flatpickr.min.js"></script>
-    <script src="../asset/assets/plugins/apexcharts/apexcharts.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            // Inisialisasi modal secara manual untuk setiap ID modal
-           
-                $('#detailModal{{ $data->id }}').modal({
-                    show: false,
-                    backdrop: 'static',
-                    keyboard: false
-                });
-          
-        });
-    </script>
-
- 
-     <!-- Common JS -->
-     <script src="../asset/assets/js/template.js"></script>
-     <!-- End Common JS -->
-     <script src="../asset/assets/js/dashboard.js"></script>
-
-
-     
-    <script src="../asset/assets2/libs/datatables.net/datatables.net.min.js"></script>
-    <script src="../asset/assets2/libs/datatables.net-bs4/datatables.net-bs4.min.js"></script>
-    <script src="../asset/assets2/libs/datatables.net-buttons/datatables.net-buttons.min.js"></script>
-    <script src="../asset/assets2/libs/datatables.net-buttons-bs4/datatables.net-buttons-bs4.min.js"></script>
-    <script src="../asset/assets2/libs/jszip/jszip.min.js"></script>
-    <script src="../asset/assets2/libs/pdfmake/pdfmake.min.js"></script>
-    <script src="../asset/assets2/libs/datatables.net-responsive/datatables.net-responsive.min.js"></script>
-    <script src="../asset/assets2/libs/datatables.net-responsive-bs4/datatables.net-responsive-bs4.min.js"></script>
-    <script src="../asset/assets2/js/pages/datatables.init.js"></script>
-    <script src="../asset/assets2/js/app.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            // Periksa apakah DataTable sudah diinisialisasi sebelumnya
-            if ($.fn.DataTable.isDataTable('#datatable')) {
-                // Hancurkan DataTable sebelum menginisialisasi ulang
-                $('#datatable').DataTable().destroy();
-            }
-    
-            // Inisialisasi DataTable
-            var table = $('#datatable').DataTable({
-                // ... (pengaturan DataTable lainnya) ...
-            });
-    
-            // Handle perubahan filter status
-            $('#statusFilter').change(function() {
-                var status = $(this).val();
-                table.column(5).search(status).draw(); // Sesuaikan dengan indeks kolom yang benar
-            });
-    
-            $('#tahunFilter').change(function() {
-                var tahun = $(this).val();
-                table.column(2).search(tahun).draw(); // Sesuaikan dengan indeks kolom yang berisi NPM
-            });
-        });
-    </script>
-
-</body>
-
+        <script src="../asset/assets/plugins/flatpickr/flatpickr.min.js"></script>
+        <script src = "../asset/assets/plugins/apexcharts/apexcharts.min.js"></script>
+        <script src="../asset/assets/js/dashboard.js"></script>
+        <!-- base js -->
+        <script src="../asset/js/app.js"></script>
+        <script src="../asset/assets/plugins/feather-icons/feather.min.js"></script>
+        <script src="../asset/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+        <!-- end base js -->
+        <!-- common js -->
+        <script src="../asset/assets/js/template.js"></script>
+        <!-- end common js -->
+    </body>
 </html>
-
