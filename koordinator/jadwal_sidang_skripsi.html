@@ -241,7 +241,9 @@
                         <label for="tahunFilter">Filter Angkatan:</label>
                         <select id="tahunFilter" class="form-control">
                             <option value="">Semua</option>
-                                <option value="{{ $year->nama_angkatan }}">{{ $year->nama_angkatan }}</option>
+                                <option value="{{ $year->nama_angkatan }}">2019</option>
+                                <option value="{{ $year->nama_angkatan }}">2020</option>
+                                <option value="{{ $year->nama_angkatan }}">2021</option>
                         </select>
                     </div>
                 </div>
@@ -260,29 +262,29 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>{{ $semh->name }}</td>
-                            <td>{{ $semh->kode_unik }}</td>
-                            <td>{{ implode(' ', array_slice(str_word_count($semh->judul, 1), 0, 6)) }}...</td>
-                            <td>{{ $semh->topik_bidang_ilmu }}</td>
-                            <td>{{ $semh->status }}</td>
+                            <td>M. Ikhwan Firdaus</td>
+                            <td>13.2019.1.00849</td>
+                            <td>Penerapan metode design thinking pada...</td>
+                            <td>HCI</td>
+                            <td>Diterima</td>
                             <td><a href="detail_jadwal_sidang_skripsi.html" class="btn btn-primary">Detail</a></td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>{{ $semh->name }}</td>
-                            <td>{{ $semh->kode_unik }}</td>
-                            <td>{{ implode(' ', array_slice(str_word_count($semh->judul, 1), 0, 6)) }}...</td>
-                            <td>{{ $semh->topik_bidang_ilmu }}</td>
-                            <td>{{ $semh->status }}</td>
+                            <td>Sony Adi Adriko</td>
+                            <td>13.2019.1.00819</td>
+                            <td>Perancangan sistem Monitoring Skripsi...</td>
+                            <td>RPL</td>
+                            <td>Pending</td>
                             <td><a href="detail_jadwal_sidang_skripsi.html" class="btn btn-primary">Detail</a></td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>{{ $semh->name }}</td>
-                            <td>{{ $semh->kode_unik }}</td>
-                            <td>{{ implode(' ', array_slice(str_word_count($semh->judul, 1), 0, 6)) }}...</td>
-                            <td>{{ $semh->topik_bidang_ilmu }}</td>
-                            <td>{{ $semh->status }}</td>
+                            <td>Novantio Ary widyatama</td>
+                            <td>13.2019.1.00780</td>
+                            <td>Analisa keranjang belanja dengan metode...</td>
+                            <td>Information Retrieval</td>
+                            <td>Ditolak</td>
                             <td><a href="detail_jadwal_sidang_skripsi.html" class="btn btn-primary">Detail</a></td>
                         </tr>
                     </tbody>

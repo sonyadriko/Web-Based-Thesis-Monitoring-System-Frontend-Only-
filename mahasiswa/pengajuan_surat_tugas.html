@@ -245,32 +245,32 @@
                                             <form action="pengajuan_surat_tugas.html" method="POST" enctype="multipart/form-data"  id="yourFormId">
                                                 <div class="mb-3">
                                                     <label for="judulskripsi" class="form-label">Judul Skripsi</label>
-                                                    <input class="form-control" type="text" id="judulskripsi" value="{{$datas->judul}}" name="judulskripsi" disabled />
+                                                    <input class="form-control" type="text" id="judulskripsi" value="Penerapan Metode Design Thinking pada ui dan ux sistem Monitoring Skripsi berbasis website" name="judulskripsi" disabled />
                     
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="dospem1" class="form-label">Dosen Pembimbing 1</label>
-                                                    <input class="form-control" type="text" id="dospem1" name="dospem1" value="{{$datas->dosen_pembimbing_utama}}" disabled />
+                                                    <input class="form-control" type="text" id="dospem1" name="dospem1" value="Anwar Sodik" disabled />
                     
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="dospem2" class="form-label">Dosen Pembimbing 2</label>
-                                                    <input class="form-control" type="text" id="dospem2" name="dospem2" value="{{$datas->dosen_pembimbing_ii}}" disabled  />
+                                                    <input class="form-control" type="text" id="dospem2" name="dospem2" value="Tidak Ada" disabled  />
                     
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="name" class="form-label">Nama Mahasiswa</label>
-                                                    <input class="form-control" type="text" id="name" name="nama" value="{{Auth::user()->name}}" disabled  />
+                                                    <input class="form-control" type="text" id="name" name="nama" value="M. Ikhwan Firdaus" disabled  />
                     
                                                 </div>
                                                 <div class="mb-3">
                                                 <label for="npm" class="form-label">NPM Mahasiswa</label>
-                                                <input class="form-control" type="text" id="npm" value="{{Auth::user()->kode_unik}}" name="npm" disabled/>
+                                                <input class="form-control" type="text" id="npm" value="13.2019.1.00849" name="npm" disabled/>
                     
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="tanggal_sidang_proposal" class="form-label">Tanggal Sidang Proposal Skripsi</label>
-                                                    <input class="form-control" type="text" value="{{ \Carbon\Carbon::parse($datas->tanggal)->format('d-m-Y" disabled/>
+                                                    <input class="form-control" type="text" value="26 November 2023" disabled/>
                                                     <input type="hidden" id="tanggal_sidang_proposal" name="tanggal_sidang_proposal" value="{{$datas->tanggal}}"/>
                                                 </div>
                                                 <div class="mb-3">

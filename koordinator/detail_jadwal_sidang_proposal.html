@@ -229,55 +229,55 @@
                                     <div class="mb-3 row">
                                         <div class="col-md-6">
                                             <label class="form-label" style="font-weight: bold">NPM</label>
-                                            <p><span>{{ $data->kode_unik }}</span></p>
+                                            <p><span>13.2019.1.00849</span></p>
                                         </div>
                                         <div class="col-md-6">
                                             <label class="form-label" style="font-weight: bold">Nama Mahasiswa</label>
-                                            <p><span>{{ $data->name }}</span></p>
+                                            <p><span>M. Ikhwan Firdaus</span></p>
                                         </div>
                                     </div>
                                     <div class="mb-3 row">
                                         <div class="col-md-6">
                                             <label class="form-label"style="font-weight: bold" >Judul</label>
-                                            <p><span style="text-transform: capitalize;">{{ $data->judul }}</span></p>
+                                            <p><span style="text-transform: capitalize;">Penerapan Metode design thinking pada ui dan ux sistem monitoring skripsi berbasis website</span></p>
                                         </div>
                                         <div class="col-md-6">
                                             <label class="form-label" style="font-weight: bold">Bidang Ilmu</label>
-                                            <p><span style="text-transform: capitalize;">{{ $data->topik_bidang_ilmu }}</span></p>
+                                            <p><span style="text-transform: capitalize;">Human Computer Interaction (HCI) </span></p>
                                         </div>
                                     </div>
                                     <div class="mb-3 row">
                                         <div class="col-md-6">
                                             <label for="dospem_utama" class="form-label" style="font-weight: bold">Dosen Pembimbing 1</label>
-                                            <p><span style="text-transform: capitalize;">{{ $data->dosen_pembimbing_utama }}</span></p>
+                                            <p><span style="text-transform: capitalize;">Anwar Sodik</span></p>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="dospem_2" class="form-label" style="font-weight: bold">Dosen Pembimbing 2</label>
-                                            <p><span style="text-transform: capitalize;">{{ $data->dosen_pembimbing_ii }}</span></p>
+                                            <p><span style="text-transform: capitalize;">Tidak Ada</span></p>
                                         </div>
                                     </div>
                                     <div class="mb-3 row">
                                         <div class="col-md-6">
                                             <label for="defaultFormControlInput" class="form-label" style="font-weight: bold">File Proposal</label>
-                                            <p> <a href="{{ asset($data->file_proposal) }}" type="application/pdf" target="_blank">{{basename($data->file_proposal)}}</a>.</p>
+                                            <p> <a href="{{ asset($data->file_proposal) }}" type="application/pdf" target="_blank">Proposal.pdf</a>.</p>
                                         </div>
                                         <div class="col-md-6">
 
                                             <label for="defaultFormControlInput" class="form-label" style="font-weight: bold">File Slip Pembayaran</label>
-                                            <p> <a href="{{ asset($data->file_slip_pembayaran) }}" type="application/pdf" target="_blank">{{basename($data->file_slip_pembayaran)}}</a>.</p>
+                                            <p> <a href="{{ asset($data->file_slip_pembayaran) }}" type="application/pdf" target="_blank">Slip_Pembayaran.pdf</a>.</p>
                                         </div>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="select1" class="form-label" style="font-weight: bold">Ketua Seminar/Dosen Penguji 1</label>
+                                        <label for="select1" class="form-label" style="font-weight: bold">Ketua Sidang/Dosen Penguji 1</label>
                                         <select class="form-select" id="select1" name="dosen_penguji_1" aria-label="Default select example" onchange="updateSelectOptions()">
-                                            <option value="" selected disabled>Pilih dosen penguji 1</option>
-                                                <option value="{{$datas->id}}">{{$datas->name}}</option>
+                                            <option value="" selected disabled>Pilih dosen penguji 1 (Ketua Sidang)</option>
+                                                <option value="{{$datas->id}}">Dian Puspita Hapsari</option>
                                         </select>
                                     </div>
                                     <div class="mb-3">
                                         <label for="select2" class="form-label" style="font-weight: bold">Dosen Penguji 2</label>
                                         <select class="form-select" id="select2" name="dosen_penguji_2" aria-label="Default select example">
-                                            <option value="" selected disabled>Pilih dosen penguji 2</option>
+                                            <option value="" selected disabled>Sulistyowati</option>
                                         </select>
                                     </div>
                                     <div class="row mb-3">
@@ -287,7 +287,7 @@
                                             <select class="form-control" id="ruanganSeminar" name="ruanganSeminar">
                                                 <option value="" disabled selected>Pilih Ruangan</option>
                                                 @foreach($listRuangan as $ruangan)
-                                                    <option value="{{ $ruangan->id_ruangan }}">{{ $ruangan->nama_ruangan }}</option>
+                                                    <option value="{{ $ruangan->id_ruangan }}">A-203</option>
                                                 @endforeach
                                             </select>
                                         </div>
