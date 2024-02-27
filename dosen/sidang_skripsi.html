@@ -235,7 +235,9 @@
                         <select id="tahunFilter" class="form-control">
                             <option value="">Semua</option>
                             @foreach($angkatan as $year)
-                                <option value="{{ $year->nama_angkatan }}">{{ $year->nama_angkatan }}</option>
+                                <option value="{{ $year->nama_angkatan }}">2019</option>
+                                <option value="{{ $year->nama_angkatan }}">2020</option>
+                                <option value="{{ $year->nama_angkatan }}">2021</option>
                             @endforeach
                         </select>
                     </div>
@@ -246,6 +248,7 @@
                             <option value="Dosen Penguji 1">Dosen Penguji 1</option>
                             <option value="Dosen Penguji 2">Dosen Penguji 2</option>
                             <option value="Dosen Penguji 3">Dosen Penguji 3</option>
+                            <option value="Sekretaris">Sekretaris</option>
                             <option value="Dosen Pembimbing">Dosen Pembimbing</option>
                         </select>
                     </div>
@@ -264,12 +267,31 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>{{ $no }}</td>
-                            <td>{{ $dosen->name }}</td>
-                            <td>{{ $dosen->kode_unik }}</td>
-                            <td>{{ implode(' ', array_slice(str_word_count($dosen->judul, 1), 0, 6)) }}...</td>
-                            <td>{{ $dosen->topik_bidang_ilmu }}</td>
-                            <td>Dosen Pembimbing</td>
+                            <td>1</td>
+                            <td>M. Ikhwan Firdaus</td>
+                            <td>13.2019.1.00849</td>
+                            <td>Penerapan metode design Thinking...</td>
+                            <td>HCI</td>
+                            <td>Dosen Pembimbing
+                            </td>
+                            <td><a href="detail_sidang_skripsi.html" class="btn btn-primary">Cek Revisi</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Sony Adi Adriko</td>
+                            <td>13.2019.1.00819</td>
+                            <td>Perancangan Sistem Monitoring Skripsi...</td>
+                            <td>RPL</td>
+                            <td>Dosen Penguji 1</td>
+                            <td><a href="{{ url('/dosen/revisi_sidang_skripsi/detail/' . $dosen->id_revisi_sidang_skripsi) }}" class="btn btn-primary">Cek Revisi</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Aji Nugroho</td>
+                            <td>13.2019.1.00781</td>
+                            <td>Perancangan Sistem Penyewaan...</td>
+                            <td>RPL</td>
+                            <td>Sekretaris</td>
                             <td><a href="{{ url('/dosen/revisi_sidang_skripsi/detail/' . $dosen->id_revisi_sidang_skripsi) }}" class="btn btn-primary">Cek Revisi</a></td>
                         </tr>
                     </tbody>

@@ -229,13 +229,13 @@
                                         <div class="col-sm-6">
                                             <div class="mb-3">
                                                 <label class="form-label" style="font-weight: bold">NPM </label>
-                                                <p><span>{{ $data->kode_unik }}</span></p>
+                                                <p><span>13.2019.1.00849</span></p>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="mb-3">
                                                 <label class="form-label" style="font-weight: bold">No Ujian </label>
-                                                <p><span>{{ $data->id_berita_acara_p }}</span></p>
+                                                <p><span>12</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -243,13 +243,13 @@
                                         <div class="col-sm-6">
                                             <div class="mb-3">
                                                 <label class="form-label" style="font-weight: bold">Nama </label>
-                                                <p><span style="text-transform: capitalize;">{{ $data->name }}</span></p>
+                                                <p><span style="text-transform: capitalize;">M. Ikhwan Firdaus</span></p>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="mb-3">
                                                 <label class="form-label" style="font-weight: bold">Tanggal </label>
-                                                <p><span>{{ $formatTanggal }}</span></p>
+                                                <p><span>Wednesday, 14 February 2024</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -257,13 +257,13 @@
                                         <div class="col-sm-6">
                                             <div class="mb-3">
                                                 <label class="form-label" style="font-weight: bold">Judul </label>
-                                                <p><span style="text-transform: capitalize;">{{ $data->judul }}</span></p>
+                                                <p><span style="text-transform: capitalize;">Penerapan Metode Design Thinking Pada Ui Dan Ux Sistem Monitoring Skripsi Berbasis Website</span></p>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="mb-3">
                                                 <label class="form-label" style="font-weight: bold">Ruang, Waktu </label>
-                                                <p><span style="text-transform: capitalize;">{{$data->nama_ruangan}}, {{$data->jam}}</span></p>
+                                                <p><span style="text-transform: capitalize;">A-203, 12.30</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -271,13 +271,13 @@
                                         <div class="col-sm-6">
                                             <div class="mb-3">
                                                 <label class="form-label" style="font-weight: bold">Dosen Pembimbing 1 </label>
-                                                <p><span style="text-transform: capitalize;">{{ $data->dosen_pembimbing_utama }}</span></p>
+                                                <p><span style="text-transform: capitalize;">Anwar Sodik</span></p>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="mb-3">
                                                 <label class="form-label" style="font-weight: bold">Dosen Pembimbing 2 </label>
-                                                <p><span style="text-transform: capitalize;">{{$data->dosen_pembimbing_ii}}</span></p>
+                                                <p><span style="text-transform: capitalize;">Tidak Ada</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -285,8 +285,8 @@
                                         <div class="col-sm-6">
                                             <div class="mb-3">
                                                 <label class="form-label" style="font-weight: bold">Dosen Penguji </label>
-                                                <p><span style="text-transform: capitalize;">{{$data->nama_penguji_1}} (Dosen Penguji 1)<br/>
-                                                    {{$data->nama_penguji_2}} (Dosen Penguji 2)</span></p>
+                                                <p><span style="text-transform: capitalize;">Dian Puspita Hapsari (Dosen Penguji 1)<br/>
+                                                    Sulistyowati (Dosen Penguji 2)</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -294,9 +294,8 @@
                                     <div class="mb-3">
                                         <span style="font-weight: bold">Cetak Revisi: </span>
                                         
-                                        <button type="button" class="btn btn-primary" onclick="showConfirmation()">Cetak</button>
+                                        <button type="submit" class="btn btn-primary" onclick="showConfirmation()">Cetak</button>
                                             
-                                 
                                         <!-- <span style="color: #FF0000">Seluruh dosen belum mengisi berita acara</span> -->
                                         
                                     </div>
@@ -323,9 +322,21 @@
                                         <tbody>
                                             <tr>
                                                 <td>1</td>
-                                                <td>{{ $bad->name }}</td>
-                                                <td>{{ $bad->revisi }}</td>
-                                                <td>{{ $bad->nilai }}</td>
+                                                <td>Dian Puspita Hapsari</td>
+                                                <td>Perbaiki dibagian bab 2 dan penulisan pada bab 1</td>
+                                                <td>79</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Sulistyowati</td>
+                                                <td>Rumus dipindah ke bab 2 dan perbaiki tabel di bab 3</td>
+                                                <td>86</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Anwar Sodik</td>
+                                                <td>Oke</td>
+                                                <td>83</td>
                                             </tr>
                                         </tbody>
                                     </table>

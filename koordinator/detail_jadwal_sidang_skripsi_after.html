@@ -230,76 +230,76 @@
                     <div class="mb-3 row">
                         <div class="col-md-6">
                             <label for="npm" class="form-label" style="font-weight: bold">NPM</label>
-                            <p><span>{{ $data->kode_unik }}</span></p>
+                            <p><span>13.2019.1.00849</span></p>
                         </div>
                         <div class="col-md-6">
                             <label for="name" class="form-label" style="font-weight: bold">Nama Mahasiswa</label>
-                            <p><span>{{ $data->name }}</span></p>
+                            <p><span>M. Ikhwan Firdaus</span></p>
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <div class="col-md-6">
                             <label for="npm" class="form-label" style="font-weight: bold">Judul</label>
-                            <p><span style="text-transform: capitalize;">{{ $data->judul }}</span></p>
+                            <p><span style="text-transform: capitalize;">Penerapan Metode Design Thinking Pada Ui Dan Ux Sistem Monitoring Skripsi Berbasis Website</span></p>
                         </div>
                         <div class="col-md-6">
                             <label for="bidang_ilmu" class="form-label" style="font-weight: bold">Bidang Ilmu</label>
-                            <p><span style="text-transform: capitalize;">{{ $data->topik_bidang_ilmu }}</span></p>
+                            <p><span style="text-transform: capitalize;">Human Computer Interacion</span></p>
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <div class="col-md-6">
                             <label for="dospemUtama" class="form-label" style="font-weight: bold">Dosen Pembimbing 1</label>
-                            <p><span style="text-transform: capitalize;">{{ $data->dosen_pembimbing_utama }}</span></p>
+                            <p><span style="text-transform: capitalize;">Anwar Sodik</span></p>
                         </div>
                         <div class="col-md-6">
                             <label for="dospem2" class="form-label" style="font-weight: bold">Dosen Pembimbing 2</label>
-                            <p><span style="text-transform: capitalize;">{{ $data->dosen_pembimbing_ii }}</span></p>
+                            <p><span style="text-transform: capitalize;">Tidak Ada</span></p>
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <div class="col-md-6">
                         <label for="defaultFormControlInput" class="form-label" style="font-weight: bold">File Skripsi</label>
-                        <p> <a href="{{ asset($data->file_skripsi) }}" type="application/pdf" target="_blank">{{basename($data->file_skripsi)}}</a>.</p>
+                        <p> <a href="{{ asset($data->file_skripsi) }}" type="application/pdf" target="_blank">Skripsi.pdf</a></p>
                         </div>
                         <div class="col-md-6">
 
                         <label for="defaultFormControlInput" class="form-label" style="font-weight: bold">File Slip Pembayaran</label>
-                        <p> <a href="{{ asset($data->file_slip_pembayaran) }}" type="application/pdf" target="_blank">{{basename($data->file_slip_pembayaran)}}</a>.</p>
+                        <p> <a href="{{ asset($data->file_slip_pembayaran) }}" type="application/pdf" target="_blank">Slip_Pembayaran.pdf</a></p>
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <div class="col-md-6">
-                            <label for="dosenPenguji1" class="form-label" style="font-weight: bold">Ketua Seminar/Dosen Penguji 1</label>
-                            <p><span>{{ $data2->nama_penguji_1 }}</span></p>
+                            <label for="dosenPenguji1" class="form-label" style="font-weight: bold">Ketua Sidang/Dosen Penguji 1</label>
+                            <p><span>Ruli Utami</span></p>
                         </div>
                         <div class="col-md-6">
                             <label for="dosenPenguji2" class="form-label" style="font-weight: bold">Dosen Penguji 2</label>
-                            <p><span>{{ $data2->nama_penguji_2 }}</span></p>
+                            <p><span>Shah Khadafi</span></p>
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <div class="col-md-6">
                             <label for="dosenPenguji3" class="form-label" style="font-weight: bold">Dosen Penguji 3</label>
-                            <p><span>{{ $data2->nama_penguji_3 }}</span></p>
+                            <p><span>Sulistyowati</span></p>
                         </div>
                         <div class="col-md-6">
                             <label for="sekretaris" class="form-label" style="font-weight: bold">Sekretaris</label>
-                            <p><span>{{ $data2->nama_sekretaris }}</span></p>
+                            <p><span>Resa Uttungga</span></p>
                         </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-md-4">
                         <label for="ruanganSeminar" class="form-label" style="font-weight: bold">Ruangan Seminar</label>
-                        <p><span>{{ $data2->nama_ruangan }}</span></p>
+                        <p><span>A-203</span></p>
                         </div>
                         <div class="col-md-4">
                             <label for="html5-date-input" class="form-label" style="font-weight: bold">Tanggal</label>
-                            <p><span>{{ $formatTanggal }}</span></p>
+                            <p><span>Wednesday, 14 February 2024</span></p>
                         </div>
                         <div class="col-md-4">
                             <label for="html5-time-input" class="form-label" style="font-weight: bold">Jam</label>
-                            <p><span>{{ $formatJam }}</span></p>
+                            <p><span>12:30</span></p>
                         </div>
                     </div>
                     <input type="hidden" name="users_id" value="{{$data2->users_id}}" />

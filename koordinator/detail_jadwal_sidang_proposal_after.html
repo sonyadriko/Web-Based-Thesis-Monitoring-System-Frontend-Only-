@@ -229,65 +229,65 @@
                             <div class="mb-3 row">
                                 <div class="col-md-6">
                                     <label for="npm" class="form-label" style="font-weight: bold">NPM</label>
-                                    <p><span>{{ $data->kode_unik }}</span></p>
+                                    <p><span>13.2019.1.00849</span></p>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="name" class="form-label" style="font-weight: bold">Nama Mahasiswa</label>
-                                    <p><span style="text-transform: capitalize;">{{ $data->name }}</span></p>
+                                    <p><span style="text-transform: capitalize;">M. Ikhwan Firdaus</span></p>
                                 </div>
                             </div>
                             <div class="mb-3 row">
                                 <div class="col-md-6">
                                     <label for="npm" class="form-label" style="font-weight: bold">Judul</label>
-                                    <p><span style="text-transform: capitalize;">{{ $data->judul }}</span></p>
+                                    <p><span style="text-transform: capitalize;">Penerapan Metode design thinking pada ui dan ux sistem monitoring skripsi berbasis website</span></p>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="bidang_ilmu" class="form-label" style="font-weight: bold">Bidang Ilmu</label>
-                                    <p><span style="text-transform: capitalize;">{{ $data->topik_bidang_ilmu }}</span></p>
+                                    <p><span style="text-transform: capitalize;">Human Computer Interaction (HCI)</span></p>
                                 </div>
                             </div>
                             <div class="mb-3 row">
                                 <div class="col-md-6">
                                     <label for="dospem_utama" class="form-label" style="font-weight: bold">Dosen Pembimbing 1</label>
-                                    <p><span style="text-transform: capitalize;">{{ $data->dosen_pembimbing_utama }}</span></p>
+                                    <p><span style="text-transform: capitalize;">Anwar Sodik</span></p>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="dospem_2" class="form-label" style="font-weight: bold">Dosen Pembimbing 2</label>
-                                    <p><span style="text-transform: capitalize;">{{ $data->dosen_pembimbing_ii }}</span></p>
+                                    <p><span style="text-transform: capitalize;">Tidak Ada</span></p>
                                 </div>
                             </div>
                             <div class="mb-3 row">
                                 <div class="col-md-6">
                                 <label for="defaultFormControlInput" class="form-label" style="font-weight: bold">File Proposal</label>
-                                <p> <a href="{{ asset($data->file_proposal) }}" type="application/pdf" target="_blank">{{basename($data->file_proposal)}}</a>.</p>
+                                <p> <a href="{{ asset($data->file_proposal) }}" type="application/pdf" target="_blank">Proposal.pdf</a>.</p>
                                 </div>
                                 <div class="col-md-6">
                                 <label for="defaultFormControlInput" class="form-label" style="font-weight: bold">File Slip Pembayaran</label>
-                                <p> <a href="{{ asset($data->file_slip_pembayaran) }}" type="application/pdf" target="_blank">{{basename($data->file_slip_pembayaran)}}</a>.</p>
+                                <p> <a href="{{ asset($data->file_slip_pembayaran) }}" type="application/pdf" target="_blank">slip_pembayaran.pdf</a>.</p>
                                 </div>
                             </div>
                             <div class="mb-3 row">
                                 <div class="col-md-6">
                                 <label for="dosen_penguji_1" class="form-label" style="font-weight: bold">Ketua Seminar/Dosen Penguji 1</label>
-                                <p><span>{{ $data2->nama_penguji_1 }}</span></p>
+                                <p><span>Dian Puspita Hapsari</span></p>
                             </div>
                             <div class="col-md-6">
                                 <label for="dosen_penguji_2" class="form-label" style="font-weight: bold">Dosen Penguji 2</label>
-                                <p><span>{{ $data2->nama_penguji_2 }}</span></p>
+                                <p><span>Sulistyowati</span></p>
                             </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-md-4">
                                 <label for="ruanganSeminar" class="form-label" style="font-weight: bold">Ruangan Seminar</label>
-                                <p><span>{{ $data2->nama_ruangan }}</span></p>
+                                <p><span>A-204</span></p>
                                 </div>
                                 <div class="col-md-4">
                                     <label for="date" class="form-label" style="font-weight: bold">Tanggal</label>
-                                    <p><span>{{ $formatTanggal }}</span></p>
+                                    <p><span>Wednesday, 14 February 2024</span></p>
                                 </div>
                                 <div class="col-md-4">
                                     <label for="time" class="form-label" style="font-weight: bold">Jam</label>
-                                    <p><span>{{ $formatJam }}</span></p>
+                                    <p><span>10:00</span></p>
                                 </div>
                             </div>
                             <input type="hidden" name="users_id" value="{{$data2->users_id}}" />

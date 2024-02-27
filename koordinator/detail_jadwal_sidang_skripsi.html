@@ -227,68 +227,78 @@
             <div class="card-body">
                 <form action="detail_jadwal_sidang_skripsi_after.html" method="POST" id="submitForm">
                     <div class="mb-3 row">
-                        <div class="col-md-6">
-                            <label for="npm" class="form-label" style="font-weight: bold">NPM</label>
-                            <p><span>{{ $data->kode_unik }}</span></p>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="name" class="form-label" style="font-weight: bold">Nama Mahasiswa</label>
-                            <p><span>{{ $data->name }}</span></p>
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <div class="col-md-6">
-                            <label for="npm" class="form-label" style="font-weight: bold">Judul</label>
-                            <p><span>{{ $data->judul }}</span></p>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="bidang_ilmu" class="form-label" style="font-weight: bold">Bidang Ilmu</label>
-                            <p><span>{{ $data->topik_bidang_ilmu }}</span></p>
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <div class="col-md-6">
-                            <label for="dospemUtama" class="form-label" style="font-weight: bold">Dosen Pembimbing 1</label>
-                            <p><span  style="text-transform: capitalize;">{{ $data->dosen_pembimbing_utama }}</span></p>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="dospem2" class="form-label" style="font-weight: bold">Dosen Pembimbing 2</label>
-                            <p><span  style="text-transform: capitalize;">{{ $data->dosen_pembimbing_ii }}</span></p>
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <div class="col-md-6">
-                            <label for="defaultFormControlInput" class="form-label" style="font-weight: bold">File Skripsi</label>
-                            <p> <a href="{{ asset($data->file_skripsi) }}" type="application/pdf" target="_blank">{{basename($data->file_skripsi)}}</a>.</p>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="defaultFormControlInput" class="form-label" style="font-weight: bold">File Slip Pembayaran</label>
-                            <p> <a href="{{ asset($data->file_slip_pembayaran) }}" type="application/pdf" target="_blank">{{basename($data->file_slip_pembayaran)}}</a>.</p>
-                        </div>
-                    </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label" style="font-weight: bold">NPM</label>
+                                            <p><span>13.2019.1.00849</span></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label" style="font-weight: bold">Nama Mahasiswa</label>
+                                            <p><span>M. Ikhwan Firdaus</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <div class="col-md-6">
+                                            <label class="form-label"style="font-weight: bold" >Judul</label>
+                                            <p><span style="text-transform: capitalize;">Penerapan Metode design thinking pada ui dan ux sistem monitoring skripsi berbasis website</span></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label" style="font-weight: bold">Bidang Ilmu</label>
+                                            <p><span style="text-transform: capitalize;">Human Computer Interaction (HCI) </span></p>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <div class="col-md-6">
+                                            <label for="dospem_utama" class="form-label" style="font-weight: bold">Dosen Pembimbing 1</label>
+                                            <p><span style="text-transform: capitalize;">Anwar Sodik</span></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="dospem_2" class="form-label" style="font-weight: bold">Dosen Pembimbing 2</label>
+                                            <p><span style="text-transform: capitalize;">Tidak Ada</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <div class="col-md-6">
+                                            <label for="defaultFormControlInput" class="form-label" style="font-weight: bold">File Skripsi</label>
+                                            <p> <a href="{{ asset($data->file_proposal) }}" type="application/pdf" target="_blank">Skripsi.pdf</a>.</p>
+                                        </div>
+                                        <div class="col-md-6">
+
+                                            <label for="defaultFormControlInput" class="form-label" style="font-weight: bold">File Slip Pembayaran</label>
+                                            <p> <a href="{{ asset($data->file_slip_pembayaran) }}" type="application/pdf" target="_blank">Slip_Pembayaran.pdf</a>.</p>
+                                        </div>
+                                    </div>
                     <div class="mb-3">
-                        <label for="select1" class="form-label" style="font-weight: bold">Ketua Seminar/Dosen Penguji 1</label>
+                        <label for="select1" class="form-label" style="font-weight: bold">Ketua Sidang/Dosen Penguji 1</label>
                         <select class="form-select" id="select1" name="dosenPenguji1" aria-label="Default select example" onchange="updateSelectOptions()">
                             <option value="" selected disabled>Pilih dosen penguji 1</option>
-                            <option value="{{$datas->id}}">{{$datas->name}}</option>
+                            <option value="{{$datas->id}}">Ruli Utami</option>
+                            <option value="{{$datas->id}}">Shah Khadafi</option>
+                            <option value="{{$datas->id}}">Sulistyowati</option>
+                            <option value="{{$datas->id}}">Resa Uttungga</option>
                         </select>
                     </div>
                     <div class="mb-3">
                         <label for="select2" class="form-label" style="font-weight: bold">Dosen Penguji 2</label>
                         <select class="form-select" id="select2" name="dosenPenguji2" aria-label="Default select example">
                             <option value="" selected disabled>Pilih dosen penguji 2</option>
+                            <option value="{{$datas->id}}">Shah Khadafi</option>
+                            <option value="{{$datas->id}}">Sulistyowati</option>
+                            <option value="{{$datas->id}}">Resa Uttungga</option>
                         </select>
                     </div>
                     <div class="mb-3">
                         <label for="select3" class="form-label" style="font-weight: bold">Dosen Penguji 3</label>
                         <select class="form-select" id="select3" name="dosenPenguji3" aria-label="Default select example">
                             <option value="" selected disabled>Pilih dosen penguji 3</option>
+                            <option value="{{$datas->id}}">Sulistyowati</option>
+                            <option value="{{$datas->id}}">Resa Uttungga</option>
                         </select>
                     </div>
                     <div class="mb-3">
                         <label for="select4" class="form-label" style="font-weight: bold">Sekretaris</label>
                         <select class="form-select" id="select4" name="sekretaris" aria-label="Default select example">
                             <option value="" selected disabled>Pilih Sekretaris</option>
+                            <option value="{{$datas->id}}">Resa Uttungga</option>
                         </select>
                     </div>
                     <div class="row mb-3">
